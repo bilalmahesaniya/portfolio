@@ -7,9 +7,9 @@ import { Footer } from "@/components/layout/Footer";
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const isKageLanding = pathname === "/kage";
+  const is3DPrimary = pathname === "/" || pathname === "/kage";
 
-  if (isKageLanding) {
+  if (is3DPrimary) {
     return <>{children}</>;
   }
 
