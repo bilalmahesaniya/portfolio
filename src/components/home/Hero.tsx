@@ -74,7 +74,7 @@ export function Hero({ onOpenResume }: HeroProps) {
               onClick={() => scrollToSection("projects")}
               className="gap-2 group shadow-glow-accent"
             >
-              <span>Explore 12 Projects</span>
+              <span>Explore 9 Projects</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
 
@@ -116,7 +116,7 @@ export function Hero({ onOpenResume }: HeroProps) {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-border-subtle font-mono">
             <div className="space-y-1">
               <span className="text-2xl sm:text-3xl font-heading font-bold text-text-primary block">
-                12
+                09
               </span>
               <span className="text-xs text-text-secondary uppercase">
                 Curated Projects

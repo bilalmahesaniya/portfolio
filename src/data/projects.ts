@@ -30,7 +30,7 @@ export interface Project {
   subtitle: string;            // One-line teaser
   category: ProjectCategory;   // 'ui-ux' or 'graphic-design'
   featured: boolean;           // Display in hero featured slot
-  sortOrder: number;           // 1 to 12
+  sortOrder: number;           // 1 to 9
   timeline: string;            // e.g. '4 Weeks, 2024'
   role: string;                // e.g. 'Lead UI/UX Designer & Prototyper'
   client: string;              // e.g. 'Fintech Concept'
@@ -263,57 +263,6 @@ export const SEED_PROJECTS: Project[] = [
     thumbnailUrl: '/projects/p-09/cover.png',
     heroImageUrl: '/projects/p-09/cover.png',
     overview: 'Crafted a refreshing commercial bottle label and marketing collateral for organic blueberry juice, emphasizing natural ingredients through botanical illustrations, water droplet textures, and vibrant splash photography.',
-    sections: []
-  },
-  {
-    id: 'p-10',
-    slug: 'eid-milad-celestial-planet-graphic-posters',
-    title: 'Eid Milad Festive Greeting & Celestial Planet Posters',
-    subtitle: 'Spiritual festive poster typography, Arabic calligraphy motifs, and cosmic illustration',
-    category: 'graphic-design',
-    featured: false,
-    sortOrder: 10,
-    timeline: '2 Weeks, 2024',
-    role: 'Graphic Designer & Digital Artist',
-    client: 'Festive & Conceptual Artwork',
-    tools: ['Adobe Photoshop', 'Illustrator', 'Poster Design', 'Digital Art'],
-    thumbnailUrl: '/projects/p-10/cover.jpg',
-    heroImageUrl: '/projects/p-10/cover.jpg',
-    overview: 'A dual-artwork showcase comprising an ornate Eid Milad-un-Nabi festive celebration poster with crescent illumination alongside an atmospheric deep-space celestial planet illustration.',
-    sections: []
-  },
-  {
-    id: 'p-11',
-    slug: 'home-services-app-and-educational-graphics',
-    title: 'Home All Services & Madni Course Promotional Design',
-    subtitle: 'Professional technician service identity paired with educational course graphics',
-    category: 'graphic-design',
-    featured: false,
-    sortOrder: 11,
-    timeline: '3 Weeks, 2024',
-    role: 'Visual & Graphic Designer',
-    client: 'Service & Education Projects',
-    tools: ['Illustrator', 'Photoshop', 'Educational Graphics', 'Social Media Design'],
-    thumbnailUrl: '/projects/p-11/cover.jpg',
-    heroImageUrl: '/projects/p-11/cover.jpg',
-    overview: 'Commercial promotional package featuring friendly character illustrations for Madni children\'s religious education course alongside a professional "Home All Type Services" mobile application mockup and banner.',
-    sections: []
-  },
-  {
-    id: 'p-12',
-    slug: 'nikey-air-sneaker-advertising-campaign',
-    title: 'Nikey Air Sneaker — Coming Soon Advertising Campaign',
-    subtitle: 'Dynamic urban footwear poster, typography composition, and social media teaser',
-    category: 'graphic-design',
-    featured: false,
-    sortOrder: 12,
-    timeline: '2 Weeks, 2024',
-    role: 'Advertising Graphic Designer',
-    client: 'Footwear Brand Campaign',
-    tools: ['Adobe Photoshop', 'Advertising Graphic Design', 'Poster Layout', 'Typography'],
-    thumbnailUrl: '/projects/p-12/cover.jpg',
-    heroImageUrl: '/projects/p-12/cover.jpg',
-    overview: 'An energetic streetwear product launch campaign featuring dynamic sneaker angle photography, bold "Coming Soon" promotional lockups, textured industrial backdrops, and modern display typography.',
     sections: []
   }
 ];

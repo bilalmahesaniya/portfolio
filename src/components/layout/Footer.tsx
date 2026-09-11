@@ -72,7 +72,7 @@ export function Footer() {
                   href="#projects"
                   className="text-text-secondary hover:text-accent-primary transition-colors inline-flex items-center gap-1"
                 >
-                  Featured Projects (12)
+                  Featured Projects (9)
                 </a>
               </li>
               <li>

@@ -3,7 +3,7 @@ import { Scene } from "@/components/Scene";
 export const metadata = {
   title: "Bilal Mahesaniya — UI/UX & Graphic Designer • 3D Portfolio",
   description:
-    "Interactive 3D Portfolio of Bilal Mahesaniya — Junior UI/UX Designer & Graphic Designer with a Computer Engineering foundation. Certified by Xipra Tech. Explore 12 curated projects.",
+    "Interactive 3D Portfolio of Bilal Mahesaniya — Junior UI/UX Designer & Graphic Designer with a Computer Engineering foundation. Certified by Xipra Tech. Explore 9 curated projects.",
 };
 
 export default function HomePage() {

@@ -40,7 +40,7 @@ export function ProjectShowcase() {
               Featured Design Projects
             </h2>
             <p className="text-base text-text-secondary font-sans leading-relaxed">
-              Explore 12 comprehensive projects spanning mobile neobanking, complex SaaS dashboards,
+              Explore 9 comprehensive projects spanning mobile neobanking, complex SaaS dashboards,
               design systems, and distinct corporate identities.
             </p>
           </div>

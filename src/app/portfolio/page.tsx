@@ -23,7 +23,7 @@ export default function HomePage() {
       {/* 03: Skills & Capabilities Matrix */}
       <SkillsSection />
 
-      {/* 04: Filterable 12-Project Showcase */}
+      {/* 04: Filterable 9-Project Showcase */}
       <ProjectShowcase />
 
       {/* 05: Formal Credentials & Degrees */}

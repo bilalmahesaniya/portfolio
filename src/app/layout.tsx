@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://bilalmahesaniya.com"),
   title: "Bilal Mahesaniya — UI/UX & Graphic Designer Portfolio",
   description:
-    "Portfolio of Bilal Mahesaniya — Junior UI/UX Designer & Graphic Designer with a Computer Engineering background. Certified by Xipra Tech. Explore 12 curated projects.",
+    "Portfolio of Bilal Mahesaniya — Junior UI/UX Designer & Graphic Designer with a Computer Engineering background. Certified by Xipra Tech. Explore 9 curated projects.",
   keywords: [
     "Bilal Mahesaniya",
     "UI/UX Designer",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Bilal Mahesaniya" }],
   openGraph: {
     title: "Bilal Mahesaniya — UI/UX & Graphic Designer Portfolio",
-    description: "Explore 12 curated UI/UX and Graphic Design projects, certifications, and technical design systems.",
+    description: "Explore 9 curated UI/UX and Graphic Design projects, certifications, and technical design systems.",
     url: "https://bilalmahesaniya.com",
     siteName: "Bilal Mahesaniya Portfolio",
     type: "website",
