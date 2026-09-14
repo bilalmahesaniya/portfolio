@@ -121,7 +121,7 @@ export function ContactSection() {
                 always open. Responses are delivered within 24 hours.
               </p>
 
-              <div className="space-y-3 text-sm font-sans pt-2">
+              <div className="space-y-4 text-sm font-sans pt-2">
                 <a
                   href="mailto:bilalmahesaniya7@gmail.com"
                   className="flex items-center gap-3 text-text-primary hover:text-accent-primary transition-colors p-3 rounded-xl bg-bg-surface-alt border border-border-subtle"
@@ -139,7 +139,7 @@ export function ContactSection() {
 
                 <a
                   href="tel:+918160280803"
-                  className="flex items-center gap-3 text-text-primary hover:text-accent-primary transition-colors p-3 rounded-xl bg-bg-surface-alt border border-border-subtle"
+                  className="flex items-center gap-3 text-text-primary hover:text-accent-secondary transition-colors p-3 rounded-xl bg-bg-surface-alt border border-border-subtle"
                 >
                   <div className="w-9 h-9 rounded-lg bg-bg-surface flex items-center justify-center text-accent-secondary">
                     <Phone className="w-4 h-4" />
@@ -147,13 +147,13 @@ export function ContactSection() {
                   <div>
                     <span className="text-xs font-mono text-text-secondary block">Phone / WhatsApp</span>
                     <span className="font-medium text-text-primary text-sm">
-                      +91 81602 80803
+                      +91 8160280803
                     </span>
                   </div>
                 </a>
 
                 <div className="flex items-center gap-3 text-text-primary p-3 rounded-xl bg-bg-surface-alt border border-border-subtle">
-                  <div className="w-9 h-9 rounded-lg bg-bg-surface flex items-center justify-center text-text-secondary">
+                  <div className="w-9 h-9 rounded-lg bg-bg-surface flex items-center justify-center text-accent-secondary">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Bilal Mahesaniya — UI/UX Designer • 3D Portfolio</title>
-<meta name="description" content="Interactive 3D Portfolio of Bilal Mahesaniya — UI/UX Designer with 1 year experience at Xipra Tech and a Computer Science foundation. Explore 15 interactive Figma prototypes.">
+<meta name="description" content="Interactive 3D Portfolio of Bilal Mahesaniya — Junior UI/UX Designer with a Computer Engineering foundation. Certified by Xipra Tech. Explore 15 interactive Figma prototypes.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b0d12'/%3E%3Ctext x='16' y='21' font-family='sans-serif' font-size='13' font-weight='800' fill='%23e0231c' text-anchor='middle'%3EBM%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="secret-pathways-assets/fonts.css">
 <style>
@@ -911,15 +911,21 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
 <!-- ============================================================ nav -->
 <header class="nav" id="nav">
   <a class="brand" href="#top" data-cursor>
-    <div style="width:34px; height:34px; border-radius:10px; background:#14161d; border:1px solid rgba(255,255,255,0.12); display:grid; place-items:center; font-family:'Onest',sans-serif; font-weight:700; color:#e0231c; font-size:13px;">BM</div>
+    <svg viewBox="0 0 44 44" fill="none" aria-hidden="true">
+      <circle cx="22" cy="25" r="8.6" fill="#e0231c" fill-opacity=".9"/>
+      <path d="M5 13h34M9 18.4h26M22 8.5v27" stroke="#dfe7e0" stroke-width="1.5"/>
+      <path d="M14 35.5h16" stroke="#dfe7e0" stroke-width="1.2" stroke-opacity=".6"/>
+    </svg>
     <span class="brand-tx"><b>BILAL MAHESANIYA</b><i>UI/UX DESIGNER</i></span>
   </a>
   <nav class="nav-links" id="navlinks">
-    <a class="nav-link" href="#gate" data-cursor><span>About</span><span class="alt">BIO</span></a>
-    <a class="nav-link" href="#pathways" data-cursor><span>Projects</span><span class="alt">WORKS</span></a>
-    <a class="nav-link" href="#lessons" data-cursor><span>Skills &amp; Study</span><span class="alt">CRAFT</span></a>
+    <a class="nav-link" href="#gate" data-cursor><span>About</span><span class="alt">PROFILE</span></a>
+    <a class="nav-link" href="#pathways" data-cursor><span>Projects</span><span class="alt">PORTFOLIO</span></a>
+    <a class="nav-link" href="#lessons" data-cursor><span>Experience</span><span class="alt">CREDENTIALS</span></a>
     <a class="nav-link" href="#eternity" data-cursor><span>Contact</span><span class="alt">CONNECT</span></a>
-    <a class="nav-resume-btn" href="/resume.html" target="_blank" data-cursor style="display:inline-flex; align-items:center; gap:6px; margin-left:8px; padding:6px 14px; border-radius:100px; border:1px solid rgba(20,241,178,0.4); color:#14f1b2; font-size:11px; text-transform:uppercase; letter-spacing:.12em; transition:all .3s;"><span>Resume Preview</span></a>
+    <button class="nav-link" onclick="openResumeModal()" data-cursor style="background:none; border:none; padding:0; cursor:pointer; font:inherit; text-align:left; color:#14f1b2;">
+      <span style="color:#14f1b2;">Resume</span><span class="alt" style="color:#14f1b2;">PREVIEW</span>
+    </button>
   </nav>
   <button class="nav-burger" aria-label="Menu" data-cursor><i></i><i></i></button>
 </header>
@@ -929,21 +935,21 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
 <!-- ============================================================ hero -->
 <section class="hero" id="hero" data-cam="0">
   <div class="hero-top">
-    <div class="eyebrow" data-rv="fade"><span class="dot" style="background:#14f1b2;"></span> UI/UX DESIGNER • PORTFOLIO 2026</div>
+    <div class="eyebrow" data-rv="fade"><span class="dot" style="background:#14f1b2;"></span> JUNIOR UI/UX DESIGNER • PORTFOLIO 2026</div>
     <h1 class="display h-hero">
       <span class="mask-line"><span>Where system</span></span>
       <span class="mask-line"><span>rigor meets</span></span>
       <span class="mask-line"><span>human craft.</span></span>
     </h1>
-    <p class="hero-sub body" data-rv="up">UI/UX Designer with 1 year experience at Xipra Tech and a Computer Science foundation. Building component design systems, mobile delivery apps, and gesture-driven interactive prototypes.</p>
+    <p class="hero-sub body" data-rv="up">Junior UI/UX Designer with a Computer Science foundation and 1 year experience at Xipra Tech. Architecting scalable design systems, mobile food apps, and 15 gesture-driven interactive Figma prototypes.</p>
     <div style="display:flex; gap:14px; flex-wrap:wrap; margin-top:24px;" data-rv="fade">
       <a href="#pathways" class="arrowlink" style="margin-top:0;" data-cursor>
         <span>Explore 15 Projects</span>
         <span class="ar"><svg viewBox="0 0 14 14" fill="none"><path d="M3 11 11 3M5 3h6v6" stroke="#dfe7e0" stroke-width="1.3"/></svg></span>
       </a>
-      <a href="/resume.html" target="_blank" class="arrowlink" style="margin-top:0; color:#14f1b2;" data-cursor>
-        <span>Live Resume Preview</span>
-        <span class="ar" style="border-color:rgba(20,241,178,0.4);"><svg viewBox="0 0 14 14" fill="none"><path d="M7 2v8M3 7l4 4 4-4M2 12h10" stroke="#14f1b2" stroke-width="1.3"/></svg></span>
+      <a href="javascript:void(0)" onclick="openResumeModal()" class="arrowlink" style="margin-top:0; color:#14f1b2;" data-cursor>
+        <span>Preview Resume</span>
+        <span class="ar" style="border-color:rgba(20,241,178,0.4);"><svg viewBox="0 0 14 14" fill="none"><path d="M1 7s2.5-4.5 6-4.5 6 4.5 6 4.5-2.5 4.5-6 4.5-6-4.5-6-4.5Z" stroke="#14f1b2" stroke-width="1.2"/><circle cx="7" cy="7" r="2" stroke="#14f1b2" stroke-width="1.2"/></svg></span>
       </a>
       <a href="#eternity" class="arrowlink" style="margin-top:0; color:#8f9a93;" data-cursor>
         <span>Get in Touch</span>
@@ -962,7 +968,7 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
       <div class="chip" data-chip="1" data-rv="up" data-cursor><span class="num">02</span>
         <span class="tx"><b>15 Projects</b><p>Selected mobile apps, OTT platforms &amp; interactive Figma prototypes.</p></span></div>
       <div class="chip" data-chip="2" data-rv="up" data-cursor><span class="num">03</span>
-        <span class="tx"><b>Skills &amp; Study</b><p>12th Science, Xipra Tech &amp; GTU Computer Science.</p></span></div>
+        <span class="tx"><b>Experience &amp; Skills</b><p>1 Year Xipra Tech, Computer Science &amp; Figma.</p></span></div>
       <div class="chip" data-chip="3" data-rv="up" data-cursor><span class="num">04</span>
         <span class="tx"><b>Collaborate</b><p>Inquiries, freelance roles &amp; portable resume.</p></span></div>
     </div>
@@ -997,28 +1003,42 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
   <div class="sec-head" data-rv="fade">
     <span class="k"><b>01</b> — Profile • About Bilal</span><span class="rule"></span><span class="k jp">ABOUT ME</span>
   </div>
-  <div class="gate-grid">
-    <h2 class="display h-sec" data-rv="up">Engineering logic, refined aesthetics, one focused vision.</h2>
+  <div class="gate-grid" style="align-items:center;">
+    <!-- Bilal's Cutout Photo Card -->
+    <div data-rv="up" style="position:relative; display:flex; flex-direction:column; align-items:center;">
+      <div style="position:relative; width:min(100%, 380px); aspect-ratio:3/4; border-radius:24px; overflow:hidden; border:1px solid rgba(255,255,255,0.12); background:linear-gradient(180deg, rgba(25,30,42,0.85), rgba(10,12,18,0.95)); box-shadow:0 24px 60px rgba(0,0,0,0.7), 0 0 40px rgba(224,35,28,0.15); display:flex; align-items:flex-end; justify-content:center;">
+        <div style="position:absolute; inset:0; background:radial-gradient(circle at 50% 35%, rgba(224,35,28,0.22), transparent 70%); pointer-events:none;"></div>
+        <img src="secret-pathways-assets/bilal-portrait.png" alt="Bilal Mahesaniya — UI/UX Designer" style="width:90%; height:auto; object-fit:contain; z-index:2; filter:drop-shadow(0 15px 30px rgba(0,0,0,0.6));" />
+        <div style="position:absolute; bottom:14px; left:14px; right:14px; z-index:3; padding:10px 14px; border-radius:14px; background:rgba(12,15,22,0.85); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.1); display:flex; justify-content:space-between; align-items:center;">
+          <div>
+            <span style="display:block; font-size:12px; font-weight:700; color:#dfe7e0; font-family:'Onest',sans-serif; letter-spacing:.04em;">Bilal Mahesaniya</span>
+            <span style="display:block; font-size:10px; color:#14f1b2; font-family:'Onest',sans-serif; letter-spacing:.08em;">1 Year Exp • Xipra Tech</span>
+          </div>
+          <span style="padding:3px 8px; border-radius:100px; background:rgba(20,241,178,0.15); border:1px solid rgba(20,241,178,0.4); font-size:9px; color:#14f1b2; font-weight:600; text-transform:uppercase;">UI/UX</span>
+        </div>
+      </div>
+    </div>
     <div class="gate-copy">
-      <p class="lead" data-rv="up">I am a designer who speaks developer. Rather than designing isolated screens, I view interfaces as living component architectures, state machines, and accessible user flows. With 1 year of UI/UX design experience at <strong style="color:#dfe7e0;">Xipra Tech</strong> and a foundation in Computer Science at <strong style="color:#dfe7e0;">GTU</strong>, I bridge design systems with production frontend code.</p>
-      <p class="body" data-rv="up">From double-diamond user research and WCAG 2.1 AA accessibility compliance to custom brand packaging and vector identities, every detail is engineered with purpose. I turn complex requirements into clear, memorable digital products that delight users and scale smoothly in code.</p>
+      <h2 class="display h-sec" data-rv="up" style="margin-bottom:20px;">Computer Science logic, refined aesthetics, one focused vision.</h2>
+      <p class="lead" data-rv="up">I am a UI/UX designer with <strong>1 year of hands-on experience at Xipra Tech</strong> and a strong academic foundation in <strong>Computer Science</strong>. Rather than designing static screens, I architect production design systems, interactive Figma state machines, and accessible user flows.</p>
+      <p class="body" data-rv="up">From double-diamond user research and WCAG 2.1 AA accessibility compliance to gesture-driven mobile funnels and interactive components, every detail is engineered with purpose. I turn complex product requirements into clear, memorable digital experiences that delight users and hand off seamlessly to developers.</p>
       <div style="display:flex; gap:16px; align-items:center; flex-wrap:wrap; margin-top:30px;">
         <a class="arrowlink" href="#pathways" data-rv="fade" data-cursor style="margin-top:0;">
           <span>Explore 15 Curated Projects</span>
           <span class="ar"><svg viewBox="0 0 14 14" fill="none"><path d="M3 11 11 3M5 3h6v6" stroke="#dfe7e0" stroke-width="1.3"/></svg></span>
         </a>
-        <a class="arrowlink" href="/resume.html" target="_blank" data-rv="fade" data-cursor style="margin-top:0; color:#14f1b2;">
-          <span>Live Resume Preview</span>
-          <span class="ar" style="border-color:rgba(20,241,178,0.4);"><svg viewBox="0 0 14 14" fill="none"><path d="M7 2v8M3 7l4 4 4-4M2 12h10" stroke="#14f1b2" stroke-width="1.3"/></svg></span>
+        <a class="arrowlink" href="javascript:void(0)" onclick="openResumeModal()" data-rv="fade" data-cursor style="margin-top:0; color:#14f1b2;">
+          <span>Preview ATS Resume</span>
+          <span class="ar" style="border-color:rgba(20,241,178,0.4);"><svg viewBox="0 0 14 14" fill="none"><path d="M1 7s2.5-4.5 6-4.5 6 4.5 6 4.5-2.5 4.5-6 4.5-6-4.5-6-4.5Z" stroke="#14f1b2" stroke-width="1.2"/><circle cx="7" cy="7" r="2" stroke="#14f1b2" stroke-width="1.2"/></svg></span>
         </a>
       </div>
     </div>
   </div>
   <div class="gate-stats" data-rv="up">
     <div><b>15</b><span>Curated Projects</span></div>
-    <div><b>1 Yr</b><span>Xipra Tech Exp.</span></div>
-    <div><b>GTU</b><span>Computer Science</span></div>
-    <div><b>100%</b><span>Design System</span></div>
+    <div><b>1 Year</b><span>Xipra Tech Exp</span></div>
+    <div><b>CS</b><span>Computer Science</span></div>
+    <div><b>100%</b><span>Design Systems</span></div>
   </div>
 </section>
 
@@ -1388,41 +1408,41 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
     </span>
   </div>
   <div class="sec-head" data-rv="fade">
-    <span class="k"><b>03</b> — Credentials • Skills &amp; Study</span><span class="rule"></span><span class="k jp">EXPERTISE</span>
+    <span class="k"><b>03</b> — Credentials • Experience &amp; Skills</span><span class="rule"></span><span class="k jp">EXPERIENCE</span>
   </div>
   <div class="cur-head">
-    <h2 class="display h-sec" data-rv="up">Four Foundational Milestones. One Comprehensive Toolkit.</h2>
-    <p class="body-lg" data-rv="up">A deliberate educational path combining mathematical logic, specialized design certifications, and computer science rigor.</p>
+    <h2 class="display h-sec" data-rv="up">Professional Experience &amp; Academic Foundations</h2>
+    <p class="body-lg" data-rv="up">1 year of professional UI/UX design experience at Xipra Tech, verified industry certifications, and rigorous Computer Science foundations at Gujarat Technological University.</p>
   </div>
   <div class="cur" id="cur">
     <div class="les" data-les="0" data-cursor>
       <span class="k">01</span>
-      <h3>12th Standard — Science Stream<em class="jp">GSEB</em></h3>
-      <p>Built analytical reasoning, advanced mathematical problem solving, physics logic, and structured inquiry.</p>
-      <span class="t">Completed</span><i class="bar"></i>
+      <h3>UI/UX Designer (1 Year Commercial Experience)<em class="jp">XIPRA TECH</em></h3>
+      <p>1 year of commercial UI/UX experience designing production web and mobile apps, scalable design systems, token architectures, and 15 interactive prototypes.</p>
+      <span class="t">2023–2024</span><i class="bar"></i>
     </div>
     <div class="les" data-les="1" data-cursor>
       <span class="k">02</span>
-      <h3>UI/UX Designer (1 Year Experience)<em class="jp">XIPRA TECH</em></h3>
-      <p>1 year of professional UI/UX design experience covering design systems, Figma tokens, double-diamond UX research, user testing, and WCAG AA accessibility.</p>
-      <span class="t">1 Year Exp</span><i class="bar"></i>
+      <h3>Computer Science<em class="jp">GTU</em></h3>
+      <p>Academic computer science foundations (OOP, data structures, algorithms, databases, web architecture) bridging design tokens with production code.</p>
+      <span class="t">Ongoing</span><i class="bar"></i>
     </div>
     <div class="les" data-les="2" data-cursor>
       <span class="k">03</span>
-      <h3>Design Systems &amp; Prototyping Specialist<em class="jp">XIPRA TECH</em></h3>
-      <p>Advanced specialization in interactive prototyping, design token architecture, motion micro-interactions, and component variants.</p>
-      <span class="t">XT-UIUX-ADV</span><i class="bar"></i>
+      <h3>Certified UI/UX Designer<em class="jp">XIPRA TECH</em></h3>
+      <p>Comprehensive industry certification covering double-diamond UX research, user journeys, usability testing, and WCAG AA accessibility.</p>
+      <span class="t">XT-UIUX-2024</span><i class="bar"></i>
     </div>
     <div class="les" data-les="3" data-cursor>
       <span class="k">04</span>
-      <h3>Computer Science<em class="jp">GTU</em></h3>
-      <p>Deepening computer science foundations (OOP, algorithms, web architecture, databases) to bridge design systems with code.</p>
-      <span class="t">Academics</span><i class="bar"></i>
+      <h3>12th Standard — Science Stream<em class="jp">GSEB</em></h3>
+      <p>Analytical reasoning, advanced mathematical problem solving, physics logic, and quantitative scientific inquiry.</p>
+      <span class="t">Completed</span><i class="bar"></i>
     </div>
     <div class="les" data-les="4" data-cursor>
       <span class="k">05</span>
       <h3>Technical Software Proficiencies<em class="jp">TOOLKIT</em></h3>
-      <p>Figma (Expert), Adobe Illustrator, Adobe Photoshop, Canva, HTML5, CSS3/Tailwind, TypeScript, React/Next.js &amp; Git.</p>
+      <p>Figma (Expert), Interactive Prototyping, Component Variants, Design Tokens, Adobe Illustrator, Photoshop, HTML5, CSS3, JavaScript &amp; Git.</p>
       <span class="t">Active Tools</span><i class="bar"></i>
     </div>
   </div>
@@ -1504,13 +1524,13 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
       <i></i><span>Email: bilalmahesaniya7@gmail.com</span>
       <svg viewBox="0 0 14 14" fill="none" width="13" height="13"><path d="M3 11 11 3M5 3h6v6" stroke="#dfe7e0" stroke-width="1.3"/></svg>
     </a>
-    <a class="cta" href="tel:+918160280803" data-rv="fade" data-cursor style="border-color:rgba(20,241,178,.4); color:#14f1b2;">
-      <i></i><span>Call / WhatsApp: +91 81602 80803</span>
-      <svg viewBox="0 0 14 14" fill="none" width="13" height="13"><path d="M3 11 11 3M5 3h6v6" stroke="#14f1b2" stroke-width="1.3"/></svg>
+    <a class="cta" href="tel:+918160280803" data-rv="fade" data-cursor style="border-color:rgba(79,124,255,.4); color:#4f7cff;">
+      <i></i><span>Call / WhatsApp: +91 8160280803</span>
+      <svg viewBox="0 0 14 14" fill="none" width="13" height="13"><path d="M2 3a1 1 0 0 1 1-1h2.153a1 1 0 0 1 .986.836l.74 4.435a1 1 0 0 1-.54 1.06l-1.548.773a11.037 11.037 0 0 0 6.105 6.105l.774-1.548a1 1 0 0 1 1.059-.54l4.435.74a1 1 0 0 1 .836.986V13a1 1 0 0 1-1 1h-2C6.477 14 2 9.523 2 4V3Z" stroke="#4f7cff" stroke-width="1.3"/></svg>
     </a>
-    <a class="cta" href="/resume.html" target="_blank" data-rv="fade" data-cursor style="border-color:rgba(255,255,255,.2); color:#dfe7e0;">
-      <i></i><span>Live Resume Preview</span>
-      <svg viewBox="0 0 14 14" fill="none" width="13" height="13"><path d="M7 2v8M3 7l4 4 4-4M2 12h10" stroke="#dfe7e0" stroke-width="1.3"/></svg>
+    <a class="cta" href="javascript:void(0)" onclick="openResumeModal()" data-rv="fade" data-cursor style="border-color:rgba(20,241,178,.4); color:#14f1b2;">
+      <i></i><span>Preview ATS Resume</span>
+      <svg viewBox="0 0 14 14" fill="none" width="13" height="13"><path d="M1 7s2.5-4.5 6-4.5 6 4.5 6 4.5-2.5 4.5-6 4.5-6-4.5-6-4.5Z" stroke="#14f1b2" stroke-width="1.2"/><circle cx="7" cy="7" r="2" stroke="#14f1b2" stroke-width="1.2"/></svg>
     </a>
   </div>
 </section>
@@ -1534,7 +1554,7 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
         <div style="width:30px; height:30px; border-radius:8px; background:#14161d; border:1px solid rgba(255,255,255,0.12); display:grid; place-items:center; font-family:'Onest',sans-serif; font-weight:700; color:#e0231c; font-size:12px;">BM</div>
         <span style="font-family:'Onest',sans-serif; font-size:16px; font-weight:700; color:#dfe7e0; letter-spacing:.06em;">BILAL MAHESANIYA</span>
       </div>
-      <p>UI/UX Designer with 1 year experience at Xipra Tech and a Computer Science foundation. Creating system-driven user experiences and interactive Figma prototypes.</p>
+      <p>Junior UI/UX Designer with a Computer Engineering foundation. Certified by Xipra Tech. Creating system-driven user experiences and interactive Figma prototypes.</p>
       <p style="margin-top:10px; font-size:12px; color:#14f1b2;">✦ Open for Junior Roles &amp; Freelance Opportunities</p>
     </div>
     <div><h4>Navigation</h4><ul>
@@ -1545,15 +1565,15 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
       <li><a href="#eternity" data-cursor>Contact (Let&apos;s Connect)</a></li>
     </ul></div>
     <div><h4>Credentials</h4><ul>
-      <li><a href="#lessons" data-cursor>1 Yr UI/UX (Xipra Tech)</a></li>
+      <li><a href="#lessons" data-cursor>UI/UX Cert (Xipra Tech)</a></li>
       <li><a href="#lessons" data-cursor>Interactive Prototyping (Figma)</a></li>
       <li><a href="#lessons" data-cursor>Computer Science (GTU)</a></li>
       <li><a href="#lessons" data-cursor>12th Science Stream (GSEB)</a></li>
-      <li><a href="/resume.html" target="_blank" data-cursor style="color:#14f1b2;">Live Resume Preview (HTML/PDF)</a></li>
+      <li><a href="javascript:void(0)" onclick="openResumeModal()" data-cursor style="color:#14f1b2;">Preview ATS Resume</a></li>
     </ul></div>
     <div><h4>Connect</h4><ul>
       <li><a href="mailto:bilalmahesaniya7@gmail.com" data-cursor>bilalmahesaniya7@gmail.com</a></li>
-      <li><a href="tel:+918160280803" data-cursor>+91 81602 80803</a></li>
+      <li><a href="tel:+918160280803" data-cursor>+91 8160280803</a></li>
       <li><a href="https://linkedin.com" target="_blank" rel="noopener" data-cursor>LinkedIn Profile</a></li>
       <li><a href="https://behance.net" target="_blank" rel="noopener" data-cursor>Behance Portfolio</a></li>
       <li><a href="https://github.com/bilalmahesaniya/portfolio" target="_blank" rel="noopener" data-cursor>GitHub Repository</a></li>
@@ -5482,6 +5502,21 @@ else addEventListener('DOMContentLoaded', boot);
     modal.style.display = 'flex';
   }
 
+  
+  function openResumeModal() {
+    const modal = document.getElementById('resume-modal');
+    if (modal) modal.style.display = 'flex';
+  }
+
+  function closeResumeModal() {
+    const modal = document.getElementById('resume-modal');
+    if (modal) modal.style.display = 'none';
+  }
+
+  document.getElementById('resume-modal')?.addEventListener('click', (e) => {
+    if (e.target.id === 'resume-modal') closeResumeModal();
+  });
+
   function closeProjectModal() {
     const iframe = document.getElementById('modal-iframe');
     if (iframe) iframe.src = '';
@@ -5492,8 +5527,49 @@ else addEventListener('DOMContentLoaded', boot);
     if (e.target.id === 'proj-modal') closeProjectModal();
   });
   window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeProjectModal();
+    if (e.key === 'Escape') { closeProjectModal(); closeResumeModal(); }
   });
 </script>
+
+<!-- ============================================================ Resume Preview Modal -->
+<div id="resume-modal" style="display:none; position:fixed; inset:0; z-index:110; background:rgba(3,5,8,0.92); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); align-items:center; justify-content:center; padding:16px;">
+  <div style="position:relative; width:100%; max-width:980px; max-height:94vh; display:flex; flex-direction:column; background:#0e1117; border:1px solid rgba(255,255,255,0.14); border-radius:22px; box-shadow:0 35px 100px rgba(0,0,0,0.9); overflow:hidden;">
+    
+    <!-- Modal Header -->
+    <div style="display:flex; align-items:center; justify-content:space-between; padding:18px 24px; border-bottom:1px solid rgba(255,255,255,0.08); background:#121620;">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="width:32px; height:32px; border-radius:8px; background:#181c26; border:1px solid rgba(255,255,255,0.12); display:grid; place-items:center; color:#e0231c; font-weight:700; font-size:13px; font-family:'Onest',sans-serif;">BM</div>
+        <div>
+          <h3 style="margin:0; font-size:16px; font-weight:700; color:#dfe7e0; font-family:'Onest',sans-serif;">Bilal Mahesaniya — ATS Resume</h3>
+          <p style="margin:2px 0 0; font-size:11px; color:#8f9a93; font-family:'Onest',sans-serif;">Junior UI/UX Designer • 1 Year Experience @ Xipra Tech • Computer Science</p>
+        </div>
+      </div>
+      
+      <div style="display:flex; align-items:center; gap:10px;">
+        <a href="/resume.html" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:6px; padding:6px 14px; border-radius:100px; background:rgba(79,124,255,0.15); border:1px solid rgba(79,124,255,0.4); color:#4f7cff; font-size:11px; text-decoration:none; font-weight:600; text-transform:uppercase; letter-spacing:.08em;">
+          <span>Fullscreen</span>
+          <svg viewBox="0 0 14 14" fill="none" width="11" height="11"><path d="M3 11 11 3M5 3h6v6" stroke="#4f7cff" stroke-width="1.3"/></svg>
+        </a>
+        <a href="/resume/Bilal_Mahesaniya_Resume.pdf" target="_blank" download style="display:inline-flex; align-items:center; gap:6px; padding:6px 14px; border-radius:100px; background:rgba(20,241,178,0.15); border:1px solid rgba(20,241,178,0.4); color:#14f1b2; font-size:11px; text-decoration:none; font-weight:600; text-transform:uppercase; letter-spacing:.08em;">
+          <span>Download PDF (Optional)</span>
+          <svg viewBox="0 0 14 14" fill="none" width="11" height="11"><path d="M7 2v8M3 7l4 4 4-4M2 12h10" stroke="#14f1b2" stroke-width="1.3"/></svg>
+        </a>
+        <button onclick="closeResumeModal()" style="width:34px; height:34px; border-radius:10px; background:#181c24; border:1px solid rgba(255,255,255,0.1); color:#dfe7e0; font-size:15px; cursor:pointer; display:grid; place-items:center; transition:background .2s;" onmouseover="this.style.background='#222733'" onmouseout="this.style.background='#181c24'">✕</button>
+      </div>
+    </div>
+
+    <!-- Live Resume Preview iframe -->
+    <div style="flex:1; width:100%; height:74vh; background:#0B0D12; position:relative; overflow:hidden;">
+      <iframe src="/resume.html" style="width:100%; height:100%; border:none; display:block;" title="Bilal Mahesaniya Resume Live Preview"></iframe>
+    </div>
+
+    <!-- Modal Footer Callout -->
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 24px; background:#0a0c10; border-top:1px solid rgba(255,255,255,0.06); font-size:11px; color:#8f9a93; font-family:'Onest',sans-serif;">
+      <span>Direct Contact: <strong style="color:#dfe7e0;">bilalmahesaniya7@gmail.com</strong> • Phone / WhatsApp: <strong style="color:#14f1b2;">+91 8160280803</strong></span>
+      <button onclick="closeResumeModal()" style="padding:5px 16px; border-radius:100px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:#dfe7e0; font-size:11px; cursor:pointer;">Close Preview</button>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>

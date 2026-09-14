@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://bilalmahesaniya.com"),
   title: "Bilal Mahesaniya — UI/UX Designer Portfolio",
   description:
-    "Portfolio of Bilal Mahesaniya — Junior UI/UX Designer with a Computer Science background. 1 year experience at Xipra Tech. Explore 15 interactive Figma prototypes.",
+    "Portfolio of Bilal Mahesaniya — Junior UI/UX Designer with a Computer Science foundation and 1 year experience at Xipra Tech. Explore 15 interactive Figma prototypes.",
   keywords: [
     "Bilal Mahesaniya",
     "UI/UX Designer",

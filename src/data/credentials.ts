@@ -2,7 +2,7 @@ export interface Credential {
   id: string;
   title: string;
   institution: string;
-  credentialType: 'certification' | 'degree' | 'academics';
+  credentialType: 'certification' | 'experience' | 'academics';
   issueDate: string;
   credentialId?: string;
   verificationUrl?: string;
@@ -11,6 +11,22 @@ export interface Credential {
 }
 
 export const CREDENTIALS_DATA: Credential[] = [
+  {
+    id: 'exp-01',
+    title: 'UI/UX Designer (1 Year Commercial Experience)',
+    institution: 'Xipra Tech',
+    credentialType: 'experience',
+    issueDate: '2023 – 2024',
+    skillsAcquired: [
+      'Production UI/UX Design',
+      'Design Token Architecture',
+      'Interactive Figma Prototyping',
+      'Mobile & Web App Funnels',
+      'Design System Governance'
+    ],
+    description:
+      '1 year of hands-on professional experience delivering user research, design systems, and responsive web & mobile application interfaces.'
+  },
   {
     id: 'cred-01',
     title: 'Computer Science',
@@ -25,7 +41,7 @@ export const CREDENTIALS_DATA: Credential[] = [
       'Software Engineering Principles'
     ],
     description:
-      'Pursuing formal academic education in Computer Science, providing an architectural and programmatic foundation that informs accessible, component-based UI design and smooth developer handoff.'
+      'Formal education in Computer Science, providing an architectural and programmatic foundation that informs accessible, component-based UI design and smooth developer handoff.'
   },
   {
     id: 'cred-02',

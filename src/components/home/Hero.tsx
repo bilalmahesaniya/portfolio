@@ -61,9 +61,9 @@ export function Hero({ onOpenResume }: HeroProps) {
 
           {/* Value Pitch */}
           <p className="text-base sm:text-lg text-text-secondary max-w-2xl leading-relaxed font-sans">
-            Bridging technical Computer Science rigor with human-centered interface design.
-            1 year of UI/UX design experience at <span className="text-text-primary font-medium">Xipra Tech</span>,
-            crafting design systems, accessible web/mobile apps, and gesture-driven interactive prototypes.
+            Bridging Computer Science foundations with human-centered interface design.
+            1 year of professional experience at <span className="text-text-primary font-medium">Xipra Tech</span>,
+            crafting scalable design systems, mobile apps, and 15 interactive Figma prototypes.
           </p>
 
           {/* Action CTAs */}
@@ -143,10 +143,10 @@ export function Hero({ onOpenResume }: HeroProps) {
             </div>
             <div className="space-y-1">
               <span className="text-2xl sm:text-3xl font-heading font-bold text-accent-primary block">
-                GTU
+                1 Year
               </span>
               <span className="text-xs text-text-secondary uppercase">
-                Computer Science
+                Xipra Tech Exp
               </span>
             </div>
             <div className="space-y-1">
@@ -200,7 +200,7 @@ export function Hero({ onOpenResume }: HeroProps) {
                       <span>Engineering</span>
                     </div>
                     <p className="text-[11px] text-text-secondary font-sans leading-tight">
-                      Computer Science foundation, component tokens, semantic HTML/CSS
+                      Computer Engineering foundation, component tokens, semantic HTML/CSS
                     </p>
                   </div>
                 </div>

@@ -37,7 +37,7 @@ export function Footer() {
               </span>
             </div>
             <p className="text-text-secondary text-sm max-w-sm leading-relaxed font-sans">
-              Junior UI/UX Designer with a Computer Science foundation.
+              Junior UI/UX Designer with a Computer Engineering foundation.
               Crafting system-driven interfaces, interactive Figma prototypes, and accessible digital experiences.
             </p>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-bg-surface-alt text-text-secondary border border-border-subtle">
@@ -81,7 +81,7 @@ export function Footer() {
                   href="#credentials"
                   className="text-text-secondary hover:text-accent-primary transition-colors inline-flex items-center gap-1"
                 >
-                  Certifications &amp; Education
+                  Certifications &amp; Experience
                 </a>
               </li>
               <li>
@@ -110,10 +110,10 @@ export function Footer() {
               </a>
               <a
                 href="tel:+918160280803"
-                className="text-text-secondary hover:text-accent-primary transition-colors inline-flex items-center gap-2"
+                className="text-text-secondary hover:text-accent-secondary transition-colors inline-flex items-center gap-2"
               >
                 <Phone className="w-4 h-4 text-accent-secondary" />
-                <span>+91 81602 80803</span>
+                <span>+91 8160280803</span>
               </a>
               <a
                 href="https://linkedin.com"
