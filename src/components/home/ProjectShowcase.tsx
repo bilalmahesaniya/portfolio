@@ -16,8 +16,9 @@ export function ProjectShowcase() {
   const counts = React.useMemo(
     () => ({
       all: allProjects.length,
-      "ui-ux": allProjects.filter((p) => p.category === "ui-ux").length,
-      "graphic-design": allProjects.filter((p) => p.category === "graphic-design").length,
+      "mobile-ui": allProjects.filter((p) => p.category === "mobile-ui").length,
+      "web-platform": allProjects.filter((p) => p.category === "web-platform").length,
+      "interactive-ui": allProjects.filter((p) => p.category === "interactive-ui").length,
     }),
     [allProjects]
   );
@@ -37,11 +38,10 @@ export function ProjectShowcase() {
               02 — PORTFOLIO SHOWCASE
             </Badge>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-text-primary tracking-tight">
-              Featured Design Projects
+              Featured UI/UX Projects
             </h2>
             <p className="text-base text-text-secondary font-sans leading-relaxed">
-              Explore 9 comprehensive projects spanning mobile neobanking, complex SaaS dashboards,
-              design systems, and distinct corporate identities.
+              Explore 15 interactive Figma prototypes spanning mobile delivery apps, OTT streaming platforms, and gesture-driven UI components.
             </p>
           </div>
 

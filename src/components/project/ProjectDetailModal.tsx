@@ -60,8 +60,8 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
 
         {/* Category Badge & Meta */}
         <div className="flex flex-wrap items-center gap-2 pt-1">
-          <Badge variant={project.category === "ui-ux" ? "mint" : "accent"} size="md">
-            {project.category === "ui-ux" ? "UI/UX DESIGN" : "GRAPHIC DESIGN"}
+          <Badge variant="mint" size="md">
+            {project.categoryLabel || "UI/UX DESIGN"}
           </Badge>
           {project.featured && (
             <Badge variant="default" size="sm">
@@ -81,15 +81,44 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
           </p>
         </div>
 
-        {/* Cover Preview Image */}
-        <div className="relative aspect-[16/10] w-full rounded-xl overflow-hidden border border-border-subtle bg-bg-surface-alt">
-          <Image
-            src={project.heroImageUrl || project.thumbnailUrl}
-            alt={project.title}
-            fill
-            unoptimized
-            className="object-cover"
-          />
+        {/* Live Figma Prototype / Preview Container */}
+        <div className="space-y-2">
+          <div className="flex items-center justify-between text-xs font-mono">
+            <span className="text-accent-primary font-medium flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-accent-primary animate-pulse" />
+              Live Interactive Prototype
+            </span>
+            {project.figmaDirectUrl && (
+              <a
+                href={project.figmaDirectUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-text-secondary hover:text-text-primary transition-colors underline-offset-4 hover:underline"
+              >
+                <span>Open in Figma Fullscreen</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            )}
+          </div>
+
+          <div className="relative aspect-[16/10] w-full min-h-[380px] rounded-xl overflow-hidden border border-border-subtle bg-black">
+            {project.figmaPrototypeUrl ? (
+              <iframe
+                src={project.figmaPrototypeUrl}
+                className="w-full h-full border-0"
+                allowFullScreen
+                title={`${project.title} Figma Prototype`}
+              />
+            ) : (
+              <Image
+                src={project.heroImageUrl || project.thumbnailUrl}
+                alt={project.title}
+                fill
+                unoptimized
+                className="object-cover"
+              />
+            )}
+          </div>
         </div>
 
         {/* Project Metadata Grid */}
@@ -185,12 +214,26 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
             Back to Grid
           </Button>
 
-          <Link href={`/project/${project.slug}`} onClick={onClose}>
-            <Button variant="primary" size="md" className="gap-2">
-              <span>Read Full Case Study</span>
-              <ArrowRight className="w-4 h-4" />
-            </Button>
-          </Link>
+          <div className="flex items-center gap-3">
+            {project.figmaDirectUrl && (
+              <a
+                href={project.figmaDirectUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono font-medium border border-accent-primary/40 text-accent-primary hover:bg-accent-primary/10 transition-colors"
+              >
+                <span>Launch Figma</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            )}
+
+            <Link href={`/project/${project.slug}`} onClick={onClose}>
+              <Button variant="primary" size="md" className="gap-2">
+                <span>Read Case Study</span>
+                <ArrowRight className="w-4 h-4" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

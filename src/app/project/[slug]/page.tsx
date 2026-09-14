@@ -64,8 +64,6 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
   const prevProject = currentIndex > 0 ? allProjects[currentIndex - 1] : allProjects[allProjects.length - 1];
   const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentIndex + 1] : allProjects[0];
 
-  const isUiUx = project.category === "ui-ux";
-
   return (
     <article className="min-h-screen py-12 md:py-20 relative overflow-hidden">
       {/* Background glow orb */}
@@ -94,8 +92,8 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
         {/* Case Study Header & Title */}
         <header className="space-y-6 max-w-4xl">
           <div className="flex flex-wrap items-center gap-2">
-            <Badge variant={isUiUx ? "mint" : "accent"} size="md">
-              {isUiUx ? "UI/UX DESIGN CASE STUDY" : "GRAPHIC DESIGN CASE STUDY"}
+            <Badge variant="mint" size="md">
+              {project.categoryLabel || "UI/UX DESIGN CASE STUDY"}
             </Badge>
             {project.featured && (
               <Badge variant="default" size="sm">
@@ -147,16 +145,45 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
           </div>
         </header>
 
-        {/* Hero Banner Mockup */}
-        <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden border border-border-subtle bg-bg-surface shadow-2xl">
-          <Image
-            src={project.heroImageUrl || project.thumbnailUrl}
-            alt={project.title}
-            fill
-            unoptimized
-            className="object-cover"
-          />
-        </div>
+        {/* Live Interactive Figma Prototype / Hero Banner */}
+        <section className="space-y-3">
+          <div className="flex items-center justify-between text-xs font-mono">
+            <span className="text-accent-primary font-medium flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-accent-primary animate-pulse" />
+              Live Interactive Prototype
+            </span>
+            {project.figmaDirectUrl && (
+              <a
+                href={project.figmaDirectUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-bg-surface border border-border-subtle hover:border-accent-primary text-text-secondary hover:text-text-primary transition-all"
+              >
+                <span>Open in Figma Fullscreen</span>
+                <ExternalLink className="w-3.5 h-3.5 text-accent-primary" />
+              </a>
+            )}
+          </div>
+
+          <div className="relative aspect-[16/9] min-h-[480px] w-full rounded-2xl overflow-hidden border border-border-subtle bg-black shadow-2xl">
+            {project.figmaPrototypeUrl ? (
+              <iframe
+                src={project.figmaPrototypeUrl}
+                className="w-full h-full border-0"
+                allowFullScreen
+                title={`${project.title} Figma Prototype`}
+              />
+            ) : (
+              <Image
+                src={project.heroImageUrl || project.thumbnailUrl}
+                alt={project.title}
+                fill
+                unoptimized
+                className="object-cover"
+              />
+            )}
+          </div>
+        </section>
 
         {/* Metrics Grid If Available */}
         {project.metrics && project.metrics.length > 0 && (
@@ -276,7 +303,11 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
               {prevProject.title}
             </span>
             <span className="text-xs font-mono text-text-secondary">
-              {prevProject.category === "ui-ux" ? "UI/UX Design" : "Graphic Design"}
+              {prevProject.category === "mobile-ui"
+                ? "Mobile UI/UX"
+                : prevProject.category === "web-platform"
+                ? "Web & Platforms"
+                : "Interactive UI"}
             </span>
           </Link>
 
@@ -292,7 +323,11 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
               {nextProject.title}
             </span>
             <span className="text-xs font-mono text-text-secondary">
-              {nextProject.category === "ui-ux" ? "UI/UX Design" : "Graphic Design"}
+              {nextProject.category === "mobile-ui"
+                ? "Mobile UI/UX"
+                : nextProject.category === "web-platform"
+                ? "Web & Platforms"
+                : "Interactive UI"}
             </span>
           </Link>
         </nav>

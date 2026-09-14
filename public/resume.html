@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bilal Mahesaniya — UI/UX Designer | Resume</title>
+  <meta name="description" content="Professional ATS-compliant resume of Bilal Mahesaniya — UI/UX Designer with a Computer Engineering background." />
+
+  <!-- Google Fonts: Space Grotesk, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-canvas: #0B0D12;
+      --bg-surface: #14161D;
+      --bg-surface-alt: #1B1E27;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(79, 124, 255, 0.3);
+      --text-primary: #E7E9EE;
+      --text-secondary: #8B92A3;
+      --accent-blue: #4F7CFF;
+      --accent-mint: #14F1B2;
+      --accent-glow: rgba(79, 124, 255, 0.15);
+      --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    html.light-ats {
+      --bg-canvas: #F8FAFC;
+      --bg-surface: #FFFFFF;
+      --bg-surface-alt: #F1F5F9;
+      --border-subtle: #E2E8F0;
+      --border-accent: #3B82F6;
+      --text-primary: #0F172A;
+      --text-secondary: #475569;
+      --accent-blue: #2563EB;
+      --accent-mint: #059669;
+      --accent-glow: rgba(37, 99, 235, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      position: relative;
+      min-height: 100vh;
+      padding-bottom: 60px;
+    }
+
+    /* Ambient Website Glow Effects */
+    .ambient-glow {
+      position: fixed;
+      top: -120px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(79, 124, 255, 0.12) 0%, rgba(20, 241, 178, 0.06) 50%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(80px);
+      transition: opacity 0.3s ease;
+    }
+    html.light-ats .ambient-glow {
+      opacity: 0.15;
+    }
+
+    /* Control Toolbar (Sticky Top) */
+    .resume-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(11, 13, 18, 0.82);
+      border-bottom: 1px solid var(--border-subtle);
+      transition: background 0.3s ease;
+    }
+    html.light-ats .resume-toolbar {
+      background: rgba(255, 255, 255, 0.88);
+      border-bottom: 1px solid #E2E8F0;
+    }
+
+    .toolbar-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .toolbar-badge {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      background: rgba(20, 241, 178, 0.12);
+      color: var(--accent-mint);
+      border: 1px solid rgba(20, 241, 178, 0.25);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--accent-blue);
+      color: #FFFFFF;
+      box-shadow: 0 0 16px -2px rgba(79, 124, 255, 0.4);
+    }
+    .btn-primary:hover {
+      background: #3B66E8;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: var(--bg-surface-alt);
+      color: var(--text-primary);
+      border: 1px solid var(--border-subtle);
+    }
+    .btn-secondary:hover {
+      border-color: var(--accent-blue);
+      color: var(--accent-blue);
+    }
+
+    /* Resume Document Wrapper */
+    .resume-wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 960px;
+      margin: 32px auto;
+      padding: 0 20px;
+    }
+
+    .resume-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 48px;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4);
+      transition: background 0.3s ease, border 0.3s ease;
+      animation: fadeIn 0.5s ease-out;
+    }
+    html.light-ats .resume-card {
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+      border: 1px solid #E2E8F0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Resume Header */
+    .resume-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 28px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+
+    .header-main {
+      flex: 1 1 450px;
+    }
+
+    .header-name {
+      font-family: var(--font-heading);
+      font-size: 38px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+
+    .header-tagline {
+      font-size: 15px;
+      color: var(--accent-mint);
+      font-weight: 500;
+      margin-bottom: 12px;
+      font-family: var(--font-heading);
+    }
+
+    .header-summary {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      max-width: 560px;
+    }
+
+    .header-contact {
+      flex: 0 1 260px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 12.5px;
+      font-family: var(--font-mono);
+      color: var(--text-secondary);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+    .contact-item:hover {
+      color: var(--accent-blue);
+    }
+    .contact-item svg {
+      width: 14px;
+      height: 14px;
+      color: var(--accent-blue);
+      flex-shrink: 0;
+    }
+
+    /* 2-Column Grid Layout */
+    .resume-grid {
+      display: grid;
+      grid-template-columns: 1.55fr 1fr;
+      gap: 36px;
+    }
+
+    @media (max-width: 768px) {
+      .resume-card {
+        padding: 24px;
+      }
+      .resume-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .header-name {
+        font-size: 28px;
+      }
+    }
+
+    /* Section Typography */
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-blue);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .section-title::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-mint);
+    }
+
+    /* Experience & Project Cards */
+    .timeline-item {
+      margin-bottom: 22px;
+      position: relative;
+    }
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 3px;
+    }
+
+    .item-title {
+      font-family: var(--font-heading);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .item-company {
+      font-weight: 500;
+      color: var(--accent-blue);
+    }
+
+    .item-date {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-secondary);
+    }
+
+    .item-role {
+      font-size: 12.5px;
+      font-style: italic;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+
+    .bullet-list {
+      list-style-type: none;
+      padding-left: 0;
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .bullet-list li {
+      position: relative;
+      padding-left: 16px;
+      margin-bottom: 5px;
+    }
+
+    .bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 2px;
+      color: var(--accent-mint);
+      font-weight: bold;
+    }
+
+    .metric-highlight {
+      color: var(--text-primary);
+      font-weight: 600;
+      background: rgba(79, 124, 255, 0.1);
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+    }
+    html.light-ats .metric-highlight {
+      background: #E0E7FF;
+      color: #1E3A8A;
+    }
+
+    /* Skills Badges */
+    .skills-group {
+      margin-bottom: 18px;
+    }
+    .skills-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .group-label {
+      font-family: var(--font-heading);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .tag-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: var(--bg-surface-alt);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      transition: all 0.15s ease;
+    }
+    .tag:hover {
+      color: var(--accent-mint);
+      border-color: rgba(20, 241, 178, 0.4);
+    }
+
+    /* Education & Certifications */
+    .credential-card {
+      padding: 12px 14px;
+      border-radius: 10px;
+      background: var(--bg-surface-alt);
+      border: 1px solid var(--border-subtle);
+      margin-bottom: 10px;
+    }
+    .credential-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .cred-title {
+      font-family: var(--font-heading);
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .cred-meta {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--accent-mint);
+      margin: 2px 0 4px 0;
+    }
+
+    .cred-desc {
+      font-size: 11.5px;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #1B1E27;
+      border: 1px solid var(--accent-mint);
+      color: var(--text-primary);
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+      z-index: 200;
+      pointer-events: none;
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ======================================================== */
+    /* ATS PRINT & EXPORT OPTIMIZATION STYLESHEET               */
+    /* ======================================================== */
+    @media print {
+      @page {
+        size: letter;
+        margin: 0.45in;
+      }
+
+      body {
+        background: #FFFFFF !important;
+        color: #0F172A !important;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+        padding: 0 !important;
+      }
+
+      .ambient-glow,
+      .resume-toolbar,
+      .toast {
+        display: none !important;
+      }
+
+      .resume-wrapper {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      .resume-card {
+        background: #FFFFFF !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+      }
+
+      .resume-header {
+        border-bottom: 2px solid #0F172A !important;
+        padding-bottom: 14px !important;
+        margin-bottom: 18px !important;
+      }
+
+      .header-name {
+        font-size: 26pt !important;
+        color: #0F172A !important;
+      }
+
+      .header-tagline {
+        font-size: 11pt !important;
+        color: #1E3A8A !important;
+        font-weight: bold !important;
+      }
+
+      .header-summary {
+        font-size: 9.5pt !important;
+        color: #334155 !important;
+      }
+
+      .header-contact {
+        font-size: 8.5pt !important;
+        color: #334155 !important;
+      }
+
+      .contact-item {
+        color: #334155 !important;
+      }
+
+      .contact-item svg {
+        display: none !important;
+      }
+
+      .section-title {
+        color: #1E3A8A !important;
+        font-size: 10pt !important;
+        border-bottom: 1px solid #CBD5E1 !important;
+        margin-bottom: 10px !important;
+        padding-bottom: 3px !important;
+      }
+
+      .section-title::before {
+        display: none !important;
+      }
+
+      .item-title {
+        font-size: 10pt !important;
+        color: #0F172A !important;
+      }
+
+      .item-company {
+        color: #1E3A8A !important;
+      }
+
+      .item-date {
+        font-size: 8.5pt !important;
+        color: #475569 !important;
+      }
+
+      .item-role {
+        font-size: 9pt !important;
+        color: #475569 !important;
+      }
+
+      .bullet-list {
+        font-size: 9pt !important;
+        color: #1E293B !important;
+      }
+
+      .bullet-list li::before {
+        color: #0F172A !important;
+      }
+
+      .metric-highlight {
+        background: transparent !important;
+        color: #0F172A !important;
+        font-weight: 700 !important;
+        padding: 0 !important;
+      }
+
+      .credential-card {
+        background: #F8FAFC !important;
+        border: 1px solid #E2E8F0 !important;
+        padding: 8px 10px !important;
+        break-inside: avoid;
+      }
+
+      .cred-title {
+        font-size: 9.5pt !important;
+        color: #0F172A !important;
+      }
+
+      .cred-meta {
+        color: #1E3A8A !important;
+        font-size: 8.5pt !important;
+      }
+
+      .cred-desc {
+        font-size: 8.5pt !important;
+        color: #334155 !important;
+      }
+
+      .tag {
+        background: #F1F5F9 !important;
+        color: #1E293B !important;
+        border: 1px solid #CBD5E1 !important;
+        font-size: 8pt !important;
+      }
+
+      .timeline-item {
+        break-inside: avoid;
+        margin-bottom: 14px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Ambient Mesh -->
+  <div class="ambient-glow"></div>
+
+  <!-- Interactive Controls Toolbar (Hidden in Print) -->
+  <aside class="resume-toolbar" aria-label="Resume actions">
+    <div class="toolbar-container">
+      <div class="toolbar-left">
+        <a href="/" class="btn btn-secondary" title="Return to 3D Portfolio">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          <span>Portfolio Home</span>
+        </a>
+        <div class="toolbar-badge">
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent-mint); display: inline-block;"></span>
+          ATS-COMPLIANT RESUME • UPDATED 2026
+        </div>
+      </div>
+
+      <div class="toolbar-actions">
+        <!-- Toggle View Mode -->
+        <button id="themeToggleBtn" class="btn btn-secondary" onclick="toggleViewTheme()" title="Switch between Dark Portfolio and Clean ATS Paper View">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <span id="themeToggleText">ATS Paper Mode</span>
+        </button>
+
+        <!-- Copy Plain Text for ATS forms -->
+        <button class="btn btn-secondary" onclick="copyPlainTextResume()" title="Copy plain text for forms">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+          <span>Copy Plain Text</span>
+        </button>
+
+        <!-- Export / Save ATS PDF -->
+        <button class="btn btn-primary" onclick="window.print()" title="Print or Save as ATS PDF">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+          <span>Save as ATS PDF</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Resume Main Document -->
+  <main class="resume-wrapper">
+    <article class="resume-card" id="resumeContent">
+
+      <!-- Header Section -->
+      <header class="resume-header">
+        <div class="header-main">
+          <h1 class="header-name">Bilal Mahesaniya</h1>
+          <p class="header-tagline">Junior UI/UX Designer • Computer Engineering Foundation</p>
+          <p class="header-summary">
+            Specialized in crafting system-driven user interfaces, responsive mobile design tokens, and interactive prototypes. Bridges computer engineering logic with human-centered product ergonomics, achieving measurable engagement across 15 curated UI/UX projects. Certified in UI/UX Design by Xipra Tech.
+          </p>
+        </div>
+
+        <div class="header-contact">
+          <a href="mailto:contact@bilalmahesaniya.com" class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <span>contact@bilalmahesaniya.com</span>
+          </a>
+          <span class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Gujarat, India • Remote Worldwide</span>
+          </span>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            <span>linkedin.com/in/bilalmahesaniya</span>
+          </a>
+          <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m10 15 5-3-5-3v6Z"/></svg>
+            <span>behance.net/bilalmahesaniya</span>
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            <span>github.com/bilalmahesaniya</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- 2-Column Content Grid -->
+      <div class="resume-grid">
+
+        <!-- Left Column: Experience, Featured Projects, Education -->
+        <div class="grid-left">
+
+          <!-- Work Experience -->
+          <section>
+            <h2 class="section-title">Work Experience</h2>
+
+            <!-- Position 1 -->
+            <div class="timeline-item">
+              <div class="item-header">
+                <span class="item-title">Freelance UI/UX Designer</span>
+                <span class="item-date">2023 – PRESENT</span>
+              </div>
+              <p class="item-role"><span class="item-company">Self-Employed</span> • Gujarat, India &amp; Remote</p>
+              <ul class="bullet-list">
+                <li>Designed end-to-end web and mobile interfaces for <span class="metric-highlight">15 curated projects</span> spanning OTT streaming, food delivery, neobanking cards, and spatial web experiences.</li>
+                <li>Architected component libraries in Figma utilizing auto-layout, interactive variants, and scalable tokens, accelerating developer handoff speed by <span class="metric-highlight">35%</span>.</li>
+                <li>Audited and enforced <span class="metric-highlight">WCAG 2.1 AA</span> accessibility contrast standards and 8pt touch target rhythm across all viewport form factors.</li>
+              </ul>
+            </div>
+
+            <!-- Position 2 -->
+            <div class="timeline-item">
+              <div class="item-header">
+                <span class="item-title">UI/UX Design Trainee &amp; Prototyper</span>
+                <span class="item-date">2024</span>
+              </div>
+              <p class="item-role"><span class="item-company">Xipra Tech</span> • Gujarat, India</p>
+              <ul class="bullet-list">
+                <li>Executed Double-Diamond UX methodology: competitive benchmarking, user journey mapping, low-fidelity wireframing, and interactive hi-fi prototypes.</li>
+                <li>Redesigned mobile checkout funnels into intuitive <span class="metric-highlight">3-step flows</span>, reducing menu scan time by <span class="metric-highlight">30%</span> through strategic category filtering chips.</li>
+              </ul>
+            </div>
+
+            <!-- Position 3 -->
+            <div class="timeline-item">
+              <div class="item-header">
+                <span class="item-title">Design Systems &amp; Prototyping Specialist</span>
+                <span class="item-date">2024</span>
+              </div>
+              <p class="item-role"><span class="item-company">Xipra Tech</span> • Gujarat, India</p>
+              <ul class="bullet-list">
+                <li>Architected scalable component libraries, design tokens, and interactive prototype flows in Figma with responsive auto-layout variants.</li>
+                <li>Designed high-fidelity micro-interactions, state machines, and ergonomic touch targets adhering to WCAG 2.1 AA accessibility guidelines.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Featured Projects -->
+          <section style="margin-top: 28px;">
+            <h2 class="section-title">Featured UI/UX &amp; Design Projects</h2>
+
+            <!-- Project 1 -->
+            <div class="timeline-item">
+              <div class="item-header">
+                <span class="item-title">CineWave — Movie Discovery &amp; Streaming UI</span>
+                <span class="item-date">Figma, Dark UI</span>
+              </div>
+              <p class="item-role">Lead Product Designer • Concept Streaming Application</p>
+              <ul class="bullet-list">
+                <li>Engineered a cinematic dark-mode mobile UI featuring curated watchlists and single-tap synopsis previews, driving <span class="metric-highlight">+42% Watchlist Additions</span>.</li>
+                <li>Optimized navigation speed to under <span class="metric-highlight">2 taps</span> for trailer discovery via card trays and seamless auto-layout variants.</li>
+              </ul>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="timeline-item">
+              <div class="item-header">
+                <span class="item-title">Foodgo — Quick Food Ordering &amp; Delivery</span>
+                <span class="item-date">iOS 17, Component Tokens</span>
+              </div>
+              <p class="item-role">Mobile UI/UX Designer • Quick-Service Restaurant Concept</p>
+              <ul class="bullet-list">
+                <li>Streamlined ordering into a thumb-friendly 3-step checkout funnel with dynamic filter pills, reducing menu scan time by <span class="metric-highlight">30%</span>.</li>
+                <li>Adhered to Apple iOS HIG 48x48px minimum touch targets and clean rating badges.</li>
+              </ul>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="timeline-item">
+              <div class="item-header">
+                <span class="item-title">Lord of Drinks &amp; Artisanal Brand Packaging</span>
+                <span class="item-date">Illustrator, Photoshop, 3D</span>
+              </div>
+              <p class="item-role">Visual &amp; Packaging Designer • Beverage &amp; Artisan Brands</p>
+              <ul class="bullet-list">
+                <li>Designed 3D rotating product presentation, custom vector illustrations, and print-ready CMYK label die-lines for commercial retail packaging.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Education -->
+          <section style="margin-top: 28px;">
+            <h2 class="section-title">Education</h2>
+
+            <div class="timeline-item">
+              <div class="item-header">
+                <span class="item-title">Gujarat Technological University (GTU)</span>
+                <span class="item-date">2023 – PRESENT</span>
+              </div>
+              <p class="item-role">Diploma in Computer Engineering • Ongoing</p>
+              <p style="font-size: 12px; color: var(--text-secondary); line-height: 1.5;">
+                Coursework: Data Structures &amp; Algorithms, Object-Oriented Programming, Database Systems, Web Technologies (HTML/CSS/JS). Equips design practice with programmatic architecture and component modularity.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="item-header">
+                <span class="item-title">Gujarat Secondary &amp; Higher Secondary Board (GSEB)</span>
+                <span class="item-date">COMPLETED</span>
+              </div>
+              <p class="item-role">Higher Secondary Certificate (12th Science Stream)</p>
+              <p style="font-size: 12px; color: var(--text-secondary); line-height: 1.5;">
+                Advanced focus in Physics, Mathematics, Analytical Logic, and Structured Quantitative Inquiry.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <!-- Right Column: Skills, Certifications, Languages -->
+        <div class="grid-right">
+
+          <!-- Core Skills -->
+          <section>
+            <h2 class="section-title">Core Skills</h2>
+
+            <div class="skills-group">
+              <h3 class="group-label">UI/UX Design</h3>
+              <div class="tag-container">
+                <span class="tag">Wireframing</span>
+                <span class="tag">Interactive Prototyping</span>
+                <span class="tag">Design Systems</span>
+                <span class="tag">Figma Tokens</span>
+                <span class="tag">User Research</span>
+                <span class="tag">User Personas</span>
+                <span class="tag">User Flow Mapping</span>
+                <span class="tag">Information Architecture</span>
+                <span class="tag">WCAG 2.1 AA</span>
+                <span class="tag">Developer Handoff</span>
+              </div>
+            </div>
+
+            <div class="skills-group">
+              <h3 class="group-label">Design Systems &amp; Prototyping</h3>
+              <div class="tag-container">
+                <span class="tag">Component Architecture</span>
+                <span class="tag">Design Tokens</span>
+                <span class="tag">Interactive Variants</span>
+                <span class="tag">Micro-Interactions</span>
+                <span class="tag">Auto-Layout 5.0</span>
+                <span class="tag">State Machines</span>
+                <span class="tag">Developer Handoff</span>
+              </div>
+            </div>
+
+            <div class="skills-group">
+              <h3 class="group-label">Tools &amp; Software</h3>
+              <div class="tag-container">
+                <span class="tag" style="border-color: rgba(79, 124, 255, 0.4); color: var(--accent-blue);">Figma (Expert)</span>
+                <span class="tag">Adobe Illustrator</span>
+                <span class="tag">Adobe Photoshop</span>
+                <span class="tag">Canva</span>
+                <span class="tag">VS Code</span>
+                <span class="tag">Git &amp; GitHub</span>
+              </div>
+            </div>
+
+            <div class="skills-group">
+              <h3 class="group-label">Engineering &amp; Code</h3>
+              <div class="tag-container">
+                <span class="tag">HTML5 &amp; CSS3</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">JavaScript (ES6+)</span>
+                <span class="tag">TypeScript Basics</span>
+                <span class="tag">React / Next.js Basics</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Industry Certifications -->
+          <section style="margin-top: 28px;">
+            <h2 class="section-title">Certifications</h2>
+
+            <div class="credential-card">
+              <div class="cred-title">Certified UI/UX Designer</div>
+              <div class="cred-meta">Xipra Tech • Credential XT-UIUX-2024</div>
+              <p class="cred-desc">
+                Comprehensive certification covering Double-Diamond UX, Figma component variants, token architecture, usability testing, and WCAG AA guidelines.
+              </p>
+            </div>
+
+            <div class="credential-card">
+              <div class="cred-title">Design Systems &amp; Prototyping Specialist</div>
+              <div class="cred-meta">Xipra Tech • Credential XT-UIUX-ADV</div>
+              <p class="cred-desc">
+                Advanced curriculum in production component systems, tokens, interactive states, motion ergonomics, and design-to-code pipelines.
+              </p>
+            </div>
+
+            <div class="credential-card">
+              <div class="cred-title">Engineering Coursework Honors</div>
+              <div class="cred-meta">GTU • Computer Engineering</div>
+              <p class="cred-desc">
+                Programmatic and algorithmic foundations applied to component state machines and accessible interfaces.
+              </p>
+            </div>
+          </section>
+
+          <!-- Languages -->
+          <section style="margin-top: 28px;">
+            <h2 class="section-title">Languages</h2>
+            <div class="tag-container">
+              <span class="tag">English (Professional Working)</span>
+              <span class="tag">Hindi (Full Professional)</span>
+              <span class="tag">Gujarati (Native / Bilingual)</span>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Toast Notification element -->
+  <div id="toast" class="toast">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-mint)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+    <span id="toastMsg">Action completed successfully</span>
+  </div>
+
+  <!-- Interactive JavaScript -->
+  <script>
+    // Theme toggle between Dark Portfolio and ATS Paper View
+    function toggleViewTheme() {
+      const html = document.documentElement;
+      const btnText = document.getElementById("themeToggleText");
+      if (html.classList.contains("light-ats")) {
+        html.classList.remove("light-ats");
+        btnText.innerText = "ATS Paper Mode";
+        showToast("Switched to Portfolio Dark Theme");
+      } else {
+        html.classList.add("light-ats");
+        btnText.innerText = "Dark Portfolio Mode";
+        showToast("Switched to Clean ATS Recruiter Paper Mode");
+      }
+    }
+
+    // Show temporary toast message
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      const toastMsg = document.getElementById("toastMsg");
+      toastMsg.innerText = message;
+      toast.classList.add("show");
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 2500);
+    }
+
+    // Copy clean plain text for ATS application forms
+    function copyPlainTextResume() {
+      const plainText = `BILAL MAHESANIYA
+Junior UI/UX Designer | Computer Engineering Foundation
+Email: contact@bilalmahesaniya.com
+Location: Gujarat, India (Open to Remote Worldwide & Relocation)
+LinkedIn: linkedin.com/in/bilalmahesaniya
+Behance: behance.net/bilalmahesaniya
+GitHub: github.com/bilalmahesaniya
+
+PROFESSIONAL SUMMARY
+Design professional bridging computer engineering logic with human-centered product ergonomics. Specialized in crafting system-driven user interfaces, responsive mobile design tokens, and interactive Figma prototypes. Certified in UI/UX Design by Xipra Tech with 15 curated digital products.
+
+WORK EXPERIENCE
+
+Freelance UI/UX Designer | Remote / Gujarat, India
+2023 – PRESENT
+- Designed end-to-end web and mobile interfaces for 15 curated projects spanning OTT streaming, food delivery, neobanking cards, and spatial web experiences.
+- Architected component libraries in Figma utilizing auto-layout, interactive variants, and scalable tokens, accelerating developer handoff speed by 35%.
+- Audited and enforced WCAG 2.1 AA accessibility contrast standards and 8pt touch target rhythm across all viewport form factors.
+
+UI/UX Design Trainee & Prototyper | Xipra Tech, Gujarat, India
+2024
+- Executed Double-Diamond UX methodology: competitive benchmarking, user journey mapping, low-fidelity wireframing, and interactive hi-fi prototypes.
+- Redesigned mobile checkout funnels into intuitive 3-step flows, reducing menu scan time by 30% through strategic category filtering chips.
+
+Design Systems & Prototyping Specialist | Xipra Tech, Gujarat, India
+2024
+- Architected scalable component libraries, design tokens, and interactive prototype flows in Figma with responsive auto-layout variants.
+- Designed high-fidelity micro-interactions, state machines, and ergonomic touch targets adhering to WCAG 2.1 AA accessibility guidelines.
+
+FEATURED PROJECTS
+- CineWave (Movie Streaming UI): Designed cinematic dark-mode mobile UI with curated watchlists and single-tap trailer previews (+42% watchlist additions, <2 taps discovery).
+- Foodgo (Food Ordering App): 3-step checkout funnel with iOS-compliant 48px touch targets and dynamic category filter pills (-30% menu scan time).
+- Lord of Drinks: Interactive 3D product showcase and vector packaging system with CMYK die-lines.
+
+EDUCATION
+- Diploma in Computer Engineering | Gujarat Technological University (GTU) | 2023 – Ongoing
+  Coursework: Data Structures & Algorithms, OOP, Database Systems, Web Technologies (HTML/CSS/JS).
+- Higher Secondary Certificate (12th Science Stream) | Gujarat Board GSEB | Completed
+
+CORE SKILLS
+- UI/UX: Wireframing, Rapid Prototyping, Figma Design Systems & Tokens, User Research, User Flows, Information Architecture, WCAG 2.1 AA Accessibility, Developer Handoff.
+- Design Systems: Component Architecture, Design Tokens, Interactive Variants, Micro-Interactions, Auto-Layout 5.0, Developer Handoff.
+- Software: Figma (Expert), Adobe Illustrator, Adobe Photoshop, Canva, VS Code, Git/GitHub.
+- Code: HTML5, CSS3, Tailwind CSS, JavaScript (ES6+), React/Next.js basics.
+
+CERTIFICATIONS
+- Certified UI/UX Designer — Xipra Tech (Credential XT-UIUX-2024)
+- Design Systems & Prototyping Specialist — Xipra Tech (Credential XT-UIUX-ADV)
+- Engineering Coursework Honors — Gujarat Technological University
+
+LANGUAGES
+- English (Professional Working)
+- Hindi (Full Professional)
+- Gujarati (Native / Bilingual)`;
+
+      navigator.clipboard.writeText(plainText).then(() => {
+        showToast("Copied Plain Text ATS Resume to clipboard!");
+      }).catch(() => {
+        showToast("Unable to copy automatically. Please select text manually.");
+      });
+    }
+  </script>
+</body>
+</html>

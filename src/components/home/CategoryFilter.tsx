@@ -11,8 +11,9 @@ interface CategoryFilterProps {
   onFilterChange: (filter: FilterOption) => void;
   counts: {
     all: number;
-    "ui-ux": number;
-    "graphic-design": number;
+    "mobile-ui": number;
+    "web-platform": number;
+    "interactive-ui": number;
   };
 }
 
@@ -22,9 +23,10 @@ export function CategoryFilter({
   counts,
 }: CategoryFilterProps) {
   const tabs: { id: FilterOption; label: string; count: number }[] = [
-    { id: "all", label: "All Projects", count: counts.all },
-    { id: "ui-ux", label: "UI/UX Design", count: counts["ui-ux"] },
-    { id: "graphic-design", label: "Graphic Design", count: counts["graphic-design"] },
+    { id: "all", label: "All Works", count: counts.all },
+    { id: "mobile-ui", label: "Mobile UI/UX", count: counts["mobile-ui"] },
+    { id: "web-platform", label: "Web & OTT", count: counts["web-platform"] },
+    { id: "interactive-ui", label: "Interactive Cards", count: counts["interactive-ui"] },
   ];
 
   return (

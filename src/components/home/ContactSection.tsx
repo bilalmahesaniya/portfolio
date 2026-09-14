@@ -19,7 +19,7 @@ import { Button } from "@/components/ui/Button";
 interface FormState {
   name: string;
   email: string;
-  projectType: "UI/UX Design" | "Graphic Design & Branding" | "Full-Time Opportunity" | "Consultation / Other";
+  projectType: "UI/UX Design" | "Interactive Prototyping & Design Systems" | "Full-Time Opportunity" | "Consultation / Other";
   budget: string;
   message: string;
   _gotcha: string;
@@ -179,15 +179,14 @@ export function ContactSection() {
               {/* Resume CTA */}
               <div className="pt-2">
                 <a
-                  href="/resume/Bilal_Mahesaniya_Resume.pdf"
+                  href="/resume.html"
                   target="_blank"
                   rel="noopener noreferrer"
-                  download
                   className="w-full block"
                 >
                   <Button variant="secondary" size="md" className="w-full gap-2">
                     <FileDown className="w-4 h-4 text-accent-secondary" />
-                    <span>Download Bilal&apos;s Resume (PDF)</span>
+                    <span>View &amp; Download Bilal&apos;s Resume</span>
                   </Button>
                 </a>
               </div>
@@ -323,7 +322,7 @@ export function ContactSection() {
                         className="w-full h-11 px-3 rounded-xl bg-bg-surface-alt border border-border-subtle text-text-primary text-sm font-sans focus:outline-none focus:border-accent-primary transition-colors"
                       >
                         <option value="UI/UX Design">UI/UX Design Role / Project</option>
-                        <option value="Graphic Design & Branding">Graphic Design &amp; Branding</option>
+                        <option value="Interactive Prototyping & Design Systems">Interactive Prototyping &amp; Design Systems</option>
                         <option value="Full-Time Opportunity">Full-Time Junior Position</option>
                         <option value="Consultation / Other">Consultation / Internship</option>
                       </select>

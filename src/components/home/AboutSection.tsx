@@ -30,13 +30,13 @@ export function AboutSection() {
     },
     {
       year: "2024",
-      title: "Graphic Design Professional",
+      title: "Design Systems & Prototyping Specialist",
       institution: "Xipra Tech",
       icon: Award,
-      badge: "Industry Certified",
+      badge: "Advanced Specialization",
       badgeVariant: "accent" as const,
       description:
-        "Mastered brand identity creation, typography hierarchy, packaging layout, vector illustration, and Adobe Creative Suite.",
+        "Advanced specialization in interactive prototyping, design token architecture, motion micro-interactions, and component variants.",
     },
     {
       year: "Ongoing",

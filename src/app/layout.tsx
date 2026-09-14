@@ -23,23 +23,25 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://bilalmahesaniya.com"),
-  title: "Bilal Mahesaniya — UI/UX & Graphic Designer Portfolio",
+  title: "Bilal Mahesaniya — UI/UX Designer Portfolio",
   description:
-    "Portfolio of Bilal Mahesaniya — Junior UI/UX Designer & Graphic Designer with a Computer Engineering background. Certified by Xipra Tech. Explore 9 curated projects.",
+    "Portfolio of Bilal Mahesaniya — Junior UI/UX Designer with a Computer Engineering background. Certified by Xipra Tech. Explore 15 interactive Figma prototypes.",
   keywords: [
     "Bilal Mahesaniya",
     "UI/UX Designer",
-    "Graphic Designer",
     "Figma",
+    "Interactive Prototypes",
     "Design Systems",
+    "Mobile UI",
+    "Web Platforms",
     "Xipra Tech",
     "Portfolio",
     "Frontend"
   ],
   authors: [{ name: "Bilal Mahesaniya" }],
   openGraph: {
-    title: "Bilal Mahesaniya — UI/UX & Graphic Designer Portfolio",
-    description: "Explore 9 curated UI/UX and Graphic Design projects, certifications, and technical design systems.",
+    title: "Bilal Mahesaniya — UI/UX Designer Portfolio",
+    description: "Explore 15 interactive Figma prototypes, design systems, and mobile/web applications.",
     url: "https://bilalmahesaniya.com",
     siteName: "Bilal Mahesaniya Portfolio",
     type: "website",

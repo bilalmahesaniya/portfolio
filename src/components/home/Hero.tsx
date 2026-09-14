@@ -55,15 +55,15 @@ export function Hero({ onOpenResume }: HeroProps) {
               Bilal Mahesaniya
             </h1>
             <p className="text-xl sm:text-2xl md:text-3xl font-heading font-medium text-accent-primary">
-              UI/UX Designer &amp; Graphic Designer
+              UI/UX Designer
             </p>
           </div>
 
           {/* Value Pitch */}
           <p className="text-base sm:text-lg text-text-secondary max-w-2xl leading-relaxed font-sans">
             Bridging technical computer engineering rigor with human-centered interface design.
-            Certified in UI/UX and Graphic Design by <span className="text-text-primary font-medium">Xipra Tech</span>,
-            crafting design systems, accessible web/mobile apps, and distinct brand identities.
+            Certified in UI/UX Design by <span className="text-text-primary font-medium">Xipra Tech</span>,
+            crafting design systems, accessible web/mobile apps, and gesture-driven interactive prototypes.
           </p>
 
           {/* Action CTAs */}
@@ -74,22 +74,33 @@ export function Hero({ onOpenResume }: HeroProps) {
               onClick={() => scrollToSection("projects")}
               className="gap-2 group shadow-glow-accent"
             >
-              <span>Explore 9 Projects</span>
+              <span>Explore 15 Projects</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
 
-            <a
-              href="/resume/Bilal_Mahesaniya_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              download
-              className="focus-visible:outline-none"
-            >
-              <Button variant="secondary" size="lg" className="gap-2">
+            {onOpenResume ? (
+              <Button
+                variant="secondary"
+                size="lg"
+                onClick={onOpenResume}
+                className="gap-2"
+              >
                 <FileDown className="w-4 h-4 text-accent-secondary" />
-                <span>Download Resume</span>
+                <span>Interactive Resume</span>
               </Button>
-            </a>
+            ) : (
+              <a
+                href="/resume.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="focus-visible:outline-none"
+              >
+                <Button variant="secondary" size="lg" className="gap-2">
+                  <FileDown className="w-4 h-4 text-accent-secondary" />
+                  <span>Interactive Resume</span>
+                </Button>
+              </a>
+            )}
 
             <Button
               variant="outline"
@@ -116,7 +127,7 @@ export function Hero({ onOpenResume }: HeroProps) {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-border-subtle font-mono">
             <div className="space-y-1">
               <span className="text-2xl sm:text-3xl font-heading font-bold text-text-primary block">
-                09
+                15
               </span>
               <span className="text-xs text-text-secondary uppercase">
                 Curated Projects
@@ -232,7 +243,7 @@ export function Hero({ onOpenResume }: HeroProps) {
                       UI/UX Design
                     </span>
                     <span className="px-2 py-0.5 rounded bg-bg-primary text-[10px] text-text-secondary">
-                      Graphic Design
+                      Design Systems
                     </span>
                     <span className="px-2 py-0.5 rounded bg-bg-primary text-[10px] text-text-secondary">
                       GTU Diploma

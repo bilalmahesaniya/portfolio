@@ -31,7 +31,7 @@
   <circle cx="180" cy="100" r="5" fill="#27C93F" opacity="0.8" />
   
   <!-- Title & Category in header -->
-  <text x="660" y="104" text-anchor="end" fill="#8B92A3" font-family="monospace" font-size="11" font-weight="bold">GRAPHIC DESIGN</text>
+  <text x="660" y="104" text-anchor="end" fill="#8B92A3" font-family="monospace" font-size="11" font-weight="bold">UI/UX DESIGN</text>
 
   <!-- Inside UI Card Wireframe Elements -->
   <rect x="150" y="145" width="240" height="24" rx="6" fill="url(#accent-p-09)" />

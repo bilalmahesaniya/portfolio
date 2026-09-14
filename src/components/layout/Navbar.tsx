@@ -115,7 +115,7 @@ export function Navbar() {
             </span>
             <span className="font-mono text-[11px] text-text-secondary flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-accent-secondary animate-pulse" />
-              UI/UX &amp; Graphic Design
+              Junior UI/UX Designer
             </span>
           </div>
         </Link>
@@ -157,10 +157,9 @@ export function Navbar() {
             </Button>
           </Link>
           <a
-            href="/resume/Bilal_Mahesaniya_Resume.pdf"
+            href="/resume.html"
             target="_blank"
             rel="noopener noreferrer"
-            download
             className="focus-visible:outline-none"
           >
             <Button variant="secondary" size="sm" className="gap-2">
@@ -249,10 +248,9 @@ export function Navbar() {
             </div>
             <div className="grid grid-cols-2 gap-3">
               <a
-                href="/resume/Bilal_Mahesaniya_Resume.pdf"
+                href="/resume.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                download
                 className="w-full"
               >
                 <Button variant="secondary" size="md" className="w-full gap-2">

@@ -13,7 +13,7 @@ export const InquirySchema = z.object({
     .trim(),
   projectType: z.enum([
     'UI/UX Design',
-    'Graphic Design & Branding',
+    'Interactive Prototyping & Design Systems',
     'Full-Time Opportunity',
     'Consultation / Other'
   ]),

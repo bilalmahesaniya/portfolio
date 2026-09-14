@@ -46,20 +46,20 @@ export const CREDENTIALS_DATA: Credential[] = [
   },
   {
     id: 'cred-03',
-    title: 'Graphic Design Professional Course',
+    title: 'Design Systems & Interactive Prototyping',
     institution: 'Xipra Tech',
     credentialType: 'certification',
     issueDate: '2024',
-    credentialId: 'XT-GD-2024',
+    credentialId: 'XT-UIUX-ADV',
     skillsAcquired: [
-      'Visual Identity & Branding',
-      'Typography Hierarchy',
-      'Adobe Illustrator & Vector Art',
-      'Adobe Photoshop & 3D Mockups',
-      'Print Production & Packaging'
+      'Interactive Prototyping in Figma',
+      'Design Token Architecture',
+      'Component Variants & Auto-Layout',
+      'Micro-Interactions & Transitions',
+      'Design Systems Documentation'
     ],
     description:
-      'Specialized curriculum focused on brand identity creation, corporate style guides, packaging guidelines, color theory, and Swiss editorial typography.'
+      'Advanced specialized training in production-grade Figma design systems, interactive component prototyping, tokens, and scalable interface design.'
   },
   {
     id: 'cred-04',
@@ -95,13 +95,13 @@ export const SKILLS_DATA: SkillCategory[] = [
     ]
   },
   {
-    title: 'Graphic Design & Branding',
+    title: 'Design Systems & Prototyping',
     skills: [
-      { name: 'Brand Identity', level: 'Advanced' },
-      { name: 'Logo Design & Typography', level: 'Advanced' },
-      { name: 'Packaging & Print', level: 'Intermediate' },
-      { name: 'Social Media Assets', level: 'Advanced' },
-      { name: 'Vector Illustration', level: 'Intermediate' }
+      { name: 'Component Architecture', level: 'Advanced' },
+      { name: 'Auto-Layout & Variants', level: 'Expert' },
+      { name: 'Design Tokens', level: 'Advanced' },
+      { name: 'Micro-Interactions', level: 'Advanced' },
+      { name: 'Developer Handoff', level: 'Advanced' }
     ]
   },
   {

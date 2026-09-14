@@ -36,8 +36,8 @@ export function Footer() {
               </span>
             </div>
             <p className="text-text-secondary text-sm max-w-sm leading-relaxed font-sans">
-              UI/UX and Graphic Designer with a Computer Engineering foundation.
-              Crafting system-driven interfaces, brand identities, and accessible digital experiences.
+              Junior UI/UX Designer with a Computer Engineering foundation.
+              Crafting system-driven interfaces, interactive Figma prototypes, and accessible digital experiences.
             </p>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-bg-surface-alt text-text-secondary border border-border-subtle">
               <span className="w-1.5 h-1.5 rounded-full bg-accent-secondary" />
@@ -72,7 +72,7 @@ export function Footer() {
                   href="#projects"
                   className="text-text-secondary hover:text-accent-primary transition-colors inline-flex items-center gap-1"
                 >
-                  Featured Projects (9)
+                  Featured Projects (15)
                 </a>
               </li>
               <li>

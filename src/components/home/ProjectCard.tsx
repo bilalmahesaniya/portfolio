@@ -14,8 +14,6 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, onQuickView }: ProjectCardProps) {
-  const isUiUx = project.category === "ui-ux";
-
   return (
     <div className="group relative flex flex-col rounded-2xl bg-bg-surface border border-border-subtle hover:border-accent-primary/50 transition-all duration-300 overflow-hidden hover:shadow-xl hover:shadow-black/40">
       {/* Cover Image Container */}
@@ -42,14 +40,14 @@ export function ProjectCard({ project, onQuickView }: ProjectCardProps) {
             className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-medium bg-bg-surface-alt/90 text-text-primary border border-border-subtle shadow-lg backdrop-blur-md hover:border-accent-primary transition-colors"
           >
             <Eye className="w-3.5 h-3.5 text-accent-secondary" />
-            <span>Quick View</span>
+            <span>Interactive Demo</span>
           </button>
         </div>
 
         {/* Category Pill Over Image */}
         <div className="absolute top-3 left-3 z-10">
-          <Badge variant={isUiUx ? "mint" : "accent"} size="sm">
-            {isUiUx ? "UI/UX" : "GRAPHIC"}
+          <Badge variant="mint" size="sm">
+            {project.categoryLabel || "UI/UX"}
           </Badge>
         </div>
 

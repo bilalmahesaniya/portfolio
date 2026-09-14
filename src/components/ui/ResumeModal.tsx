@@ -56,25 +56,24 @@ export function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
             </div>
             <h2
               id="resume-modal-title"
-              className="text-2xl font-heading font-bold text-text-primary"
+              className="font-heading font-bold text-xl text-text-primary"
             >
               Bilal Mahesaniya — Professional Resume
             </h2>
             <p className="text-xs font-mono text-accent-primary">
-              UI/UX Designer • Graphic Designer • Diploma in Computer Engineering
+              UI/UX Designer • Design Systems &amp; Prototyping • Diploma in Computer Engineering
             </p>
           </div>
 
           <div className="flex items-center gap-2">
             <a
-              href="/resume/Bilal_Mahesaniya_Resume.pdf"
+              href="/resume.html"
               target="_blank"
               rel="noopener noreferrer"
-              download
             >
               <Button variant="primary" size="sm" className="gap-2">
-                <FileDown className="w-4 h-4" />
-                <span>Download PDF</span>
+                <ExternalLink className="w-4 h-4" />
+                <span>Open Interactive Resume</span>
               </Button>
             </a>
             <button
@@ -96,8 +95,8 @@ export function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
             </h3>
             <p className="text-sm text-text-secondary leading-relaxed">
               Design professional bridging computer engineering principles with human-first UI/UX.
-              Certified in UI/UX and Graphic Design by Xipra Tech. Experienced in end-to-end product design,
-              design tokens in Figma, responsive web/mobile interfaces, WCAG 2.1 AA accessibility, and corporate visual identities.
+              Certified in UI/UX Design by Xipra Tech. Experienced in end-to-end product design,
+              design tokens in Figma, interactive prototyping, responsive web/mobile interfaces, and WCAG 2.1 AA accessibility.
             </p>
           </div>
 
@@ -131,31 +130,31 @@ export function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                   <p className="text-xs text-text-secondary">Xipra Tech • Credential XT-UIUX-2024</p>
                 </div>
                 <div className="pt-1">
-                  <p className="font-medium text-text-primary">Graphic Design Professional</p>
-                  <p className="text-xs text-text-secondary">Xipra Tech • Credential XT-GD-2024</p>
+                  <p className="font-medium text-text-primary">Design Systems &amp; Prototyping Specialist</p>
+                  <p className="text-xs text-text-secondary">Xipra Tech • Credential XT-UIUX-ADV</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Embedded PDF Viewer on Desktop */}
+          {/* Embedded Interactive Resume Viewer */}
           <div className="space-y-2">
             <div className="flex items-center justify-between text-xs font-mono text-text-secondary">
-              <span>PDF Document Preview</span>
+              <span>Interactive ATS Resume Preview (Scrollable)</span>
               <a
-                href="/resume/Bilal_Mahesaniya_Resume.pdf"
+                href="/resume.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-accent-primary hover:underline inline-flex items-center gap-1"
               >
-                <span>Open full PDF in new tab</span>
+                <span>Open standalone resume</span>
                 <ExternalLink className="w-3 h-3" />
               </a>
             </div>
-            <div className="w-full h-80 rounded-xl overflow-hidden border border-border-subtle bg-bg-surface-alt">
+            <div className="w-full h-96 rounded-xl overflow-hidden border border-border-subtle bg-bg-surface-alt">
               <iframe
-                src="/resume/Bilal_Mahesaniya_Resume.pdf#toolbar=0"
-                className="w-full h-full"
+                src="/resume.html"
+                className="w-full h-full border-none"
                 title="Bilal Mahesaniya Resume Preview"
               />
             </div>
@@ -163,22 +162,23 @@ export function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
         </div>
 
         {/* Modal Footer */}
-        <div className="pt-4 border-t border-border-subtle flex items-center justify-between">
+        <div className="pt-4 border-t border-border-subtle flex items-center justify-between flex-wrap gap-3">
           <Button variant="ghost" size="sm" onClick={onClose}>
             Close Preview
           </Button>
 
-          <a
-            href="/resume/Bilal_Mahesaniya_Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            download
-          >
-            <Button variant="primary" size="md" className="gap-2">
-              <FileDown className="w-4 h-4" />
-              <span>Download PDF File</span>
-            </Button>
-          </a>
+          <div className="flex items-center gap-3">
+            <a
+              href="/resume.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="primary" size="md" className="gap-2">
+                <FileDown className="w-4 h-4" />
+                <span>View &amp; Export ATS PDF</span>
+              </Button>
+            </a>
+          </div>
         </div>
       </div>
     </div>
