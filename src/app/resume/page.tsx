@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Bilal Mahesaniya — UI/UX Designer | ATS Resume",
   description:
-    "Interactive, ATS-compliant resume of Bilal Mahesaniya. Certified in UI/UX Design with a Diploma in Computer Engineering.",
+    "Interactive, ATS-compliant resume of Bilal Mahesaniya. 1 year experience in UI/UX Design at Xipra Tech with a Computer Science foundation.",
 };
 
 export default function ResumePage() {

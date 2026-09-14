@@ -271,7 +271,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
           </h3>
           <p className="text-text-secondary font-sans leading-relaxed text-sm sm:text-base">
             {project.engineeringNotes ||
-              `With a foundation in Computer Engineering, Bilal designs component hierarchies with strict token naming conventions (color roles, spacing tokens, responsive breakpoints) that map 1:1 to modern component libraries like Tailwind CSS and React.`}
+              `With a foundation in Computer Science, Bilal designs component hierarchies with strict token naming conventions (color roles, spacing tokens, responsive breakpoints) that map 1:1 to modern component libraries like Tailwind CSS and React.`}
           </p>
 
           <div className="pt-2 flex flex-wrap gap-2">

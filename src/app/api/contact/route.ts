@@ -50,7 +50,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(
       {
         success: false,
-        message: "An unexpected error occurred. Please reach out directly at contact@bilalmahesaniya.com.",
+        message: "An unexpected error occurred. Please reach out directly at bilalmahesaniya7@gmail.com.",
       },
       { status: 500 }
     );

@@ -44,7 +44,7 @@ export interface Project {
   metrics?: ProjectMetric[];   // Key outcomes or achievements
   overview: string;            // High-level summary
   sections: CaseStudySection[];// Detailed process blocks
-  engineeringNotes?: string;   // How Bilal's computer engineering mindset helped build it
+  engineeringNotes?: string;   // How Bilal's computer science mindset helped build it
 }
 
 export const SEED_PROJECTS: Project[] = [

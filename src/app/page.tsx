@@ -3,7 +3,7 @@ import { Scene } from "@/components/Scene";
 export const metadata = {
   title: "Bilal Mahesaniya — UI/UX Designer • 3D Portfolio",
   description:
-    "Interactive 3D Portfolio of Bilal Mahesaniya — Junior UI/UX Designer with a Computer Engineering foundation. Certified by Xipra Tech. Explore 15 interactive Figma prototypes.",
+    "Interactive 3D Portfolio of Bilal Mahesaniya — Junior UI/UX Designer with a Computer Science foundation. 1 year experience at Xipra Tech. Explore 15 interactive Figma prototypes.",
 };
 
 export default function HomePage() {

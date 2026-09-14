@@ -3,6 +3,7 @@
 import * as React from "react";
 import {
   Mail,
+  Phone,
   MapPin,
   Linkedin,
   Sparkles,
@@ -84,7 +85,7 @@ export function ContactSection() {
         setErrorMessage(data.message || "Something went wrong. Please try again or email directly.");
       }
     } catch (err) {
-      setErrorMessage("Network error. Please try again or email contact@bilalmahesaniya.com.");
+      setErrorMessage("Network error. Please try again or email bilalmahesaniya7@gmail.com.");
     } finally {
       setIsSubmitting(false);
     }
@@ -120,9 +121,9 @@ export function ContactSection() {
                 always open. Responses are delivered within 24 hours.
               </p>
 
-              <div className="space-y-4 text-sm font-sans pt-2">
+              <div className="space-y-3 text-sm font-sans pt-2">
                 <a
-                  href="mailto:contact@bilalmahesaniya.com"
+                  href="mailto:bilalmahesaniya7@gmail.com"
                   className="flex items-center gap-3 text-text-primary hover:text-accent-primary transition-colors p-3 rounded-xl bg-bg-surface-alt border border-border-subtle"
                 >
                   <div className="w-9 h-9 rounded-lg bg-bg-surface flex items-center justify-center text-accent-primary">
@@ -131,13 +132,28 @@ export function ContactSection() {
                   <div>
                     <span className="text-xs font-mono text-text-secondary block">Direct Email</span>
                     <span className="font-medium text-text-primary text-sm">
-                      contact@bilalmahesaniya.com
+                      bilalmahesaniya7@gmail.com
+                    </span>
+                  </div>
+                </a>
+
+                <a
+                  href="tel:+918160280803"
+                  className="flex items-center gap-3 text-text-primary hover:text-accent-primary transition-colors p-3 rounded-xl bg-bg-surface-alt border border-border-subtle"
+                >
+                  <div className="w-9 h-9 rounded-lg bg-bg-surface flex items-center justify-center text-accent-secondary">
+                    <Phone className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="text-xs font-mono text-text-secondary block">Phone / WhatsApp</span>
+                    <span className="font-medium text-text-primary text-sm">
+                      +91 81602 80803
                     </span>
                   </div>
                 </a>
 
                 <div className="flex items-center gap-3 text-text-primary p-3 rounded-xl bg-bg-surface-alt border border-border-subtle">
-                  <div className="w-9 h-9 rounded-lg bg-bg-surface flex items-center justify-center text-accent-secondary">
+                  <div className="w-9 h-9 rounded-lg bg-bg-surface flex items-center justify-center text-text-secondary">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>

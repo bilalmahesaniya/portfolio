@@ -2,7 +2,7 @@ export interface Credential {
   id: string;
   title: string;
   institution: string;
-  credentialType: 'certification' | 'diploma' | 'academics';
+  credentialType: 'certification' | 'degree' | 'academics';
   issueDate: string;
   credentialId?: string;
   verificationUrl?: string;
@@ -13,9 +13,9 @@ export interface Credential {
 export const CREDENTIALS_DATA: Credential[] = [
   {
     id: 'cred-01',
-    title: 'Diploma in Computer Engineering',
+    title: 'Computer Science',
     institution: 'Gujarat Technological University (GTU)',
-    credentialType: 'diploma',
+    credentialType: 'academics',
     issueDate: 'Ongoing / Present',
     skillsAcquired: [
       'Data Structures & Algorithms',
@@ -25,7 +25,7 @@ export const CREDENTIALS_DATA: Credential[] = [
       'Software Engineering Principles'
     ],
     description:
-      'Pursuing formal technical education in computer engineering, providing an architectural and programmatic foundation that informs accessible, component-based UI design and smooth developer handoff.'
+      'Pursuing formal academic education in Computer Science, providing an architectural and programmatic foundation that informs accessible, component-based UI design and smooth developer handoff.'
   },
   {
     id: 'cred-02',

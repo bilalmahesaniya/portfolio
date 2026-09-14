@@ -29,22 +29,22 @@ export function AboutSection() {
         "Intensive curriculum covering design systems, Figma tokens, double-diamond UX research, user testing, and WCAG AA accessibility standards.",
     },
     {
-      year: "2024",
-      title: "Design Systems & Prototyping Specialist",
+      year: "1 Year",
+      title: "UI/UX Designer",
       institution: "Xipra Tech",
       icon: Award,
-      badge: "Advanced Specialization",
-      badgeVariant: "accent" as const,
+      badge: "Industry Experience",
+      badgeVariant: "mint" as const,
       description:
-        "Advanced specialization in interactive prototyping, design token architecture, motion micro-interactions, and component variants.",
+        "1 year of professional hands-on UI/UX design experience conducting user research, Figma token architectures, interactive prototyping, and WCAG AA compliance.",
     },
     {
       year: "Ongoing",
-      title: "Diploma in Computer Engineering",
+      title: "Computer Science",
       institution: "Gujarat Technological University",
       icon: Laptop,
       badge: "In Progress",
-      badgeVariant: "mint" as const,
+      badgeVariant: "accent" as const,
       description:
         "Deepening computer science foundations (algorithms, web architecture, databases, OOP) to bridge design systems with production frontend code.",
     },
@@ -62,8 +62,8 @@ export function AboutSection() {
             Education &amp; Design Journey
           </h2>
           <p className="text-base text-text-secondary font-sans leading-relaxed">
-            A deliberate educational path combining technical engineering principles with rigorous
-            visual and user-experience training from Xipra Tech.
+            A deliberate educational path combining technical Computer Science principles with 1 year of hands-on
+            UI/UX design experience at Xipra Tech.
           </p>
         </div>
 
@@ -80,8 +80,8 @@ export function AboutSection() {
                 interfaces as interconnected component systems, state machines, and accessible user flows.
               </p>
               <p className="text-sm sm:text-base text-text-secondary font-sans leading-relaxed">
-                Trained at <span className="text-text-primary font-medium">Xipra Tech</span> and
-                pursuing a Diploma in Computer Engineering, I specialize in crafting design solutions
+                With 1 year of UI/UX design experience at <span className="text-text-primary font-medium">Xipra Tech</span> and
+                a foundation in Computer Science, I specialize in crafting design solutions
                 that are technically viable, pixel-perfect, and conversion-focused.
               </p>
 
